@@ -3,6 +3,7 @@ package com.xilu.lobotomycorp.item;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.xilu.lobotomycorp.item.weapon.ItemPenitence;
 import net.minecraft.item.Item;
 
 public class ModItems {
@@ -12,8 +13,7 @@ public class ModItems {
 	//Basic
 	//public static final Item PAPER_BLOOD = new ItemBase("paper_blood");
 	public static final Item LC_COGITO = new ItemBase("lc_item_cogito");
-	public static final Item LC_EGO_PENITENCE = new ItemBase("lc_item_penitence");
-
+	public static final Item LC_EGO_PENITENCE = new ItemPenitence("lc_item_penitence", Item.ToolMaterial.DIAMOND);
 
 	/*
 	WOOD(0, 59, 2.0F, 0.0F, 15),
