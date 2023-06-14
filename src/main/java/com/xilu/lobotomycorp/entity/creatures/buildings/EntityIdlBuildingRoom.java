@@ -1,6 +1,6 @@
 package com.xilu.lobotomycorp.entity.creatures.buildings;
 
-import com.xilu.lobotomycorp.IdlFramework;
+import com.xilu.lobotomycorp.LobotomyCorp;
 import com.xilu.lobotomycorp.util.CommonDef;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
@@ -18,7 +18,7 @@ public class EntityIdlBuildingRoom extends EntityIdlBuildingBase {
         buildingCore.ResetTasks();
         InitTaskQueue();
         buildingCore.setSpeed(40f / CommonDef.TICK_PER_SECOND);
-        IdlFramework.LogWarning("Summon. Size = " + size);
+        LobotomyCorp.LogWarning("Summon. Size = " + size);
     }
 
     void InitTaskQueue()
@@ -27,13 +27,13 @@ public class EntityIdlBuildingRoom extends EntityIdlBuildingBase {
 
         if (buildingCore == null)
         {
-            IdlFramework.LogWarning("Core is null");
+            LobotomyCorp.LogWarning("Core is null");
         }
 
         int bottomRange = size;
         int wallHeight = 2 * size + 1;
 
-        IdlFramework.LogWarning("Size = " + size);
+        LobotomyCorp.LogWarning("Size = " + size);
 
         IBlockState blockState = Blocks.IRON_BLOCK.getDefaultState();
 

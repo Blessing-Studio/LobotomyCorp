@@ -2,7 +2,7 @@ package com.xilu.lobotomycorp.gui.expOne;
 
 import java.io.IOException;
 
-import com.xilu.lobotomycorp.IdlFramework;
+import com.xilu.lobotomycorp.LobotomyCorp;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiButton;
 import net.minecraft.client.gui.inventory.GuiContainer;
@@ -17,7 +17,7 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 @SideOnly(Side.CLIENT)
 public class GuiContainerDemo extends GuiContainer {
-    private static final String TEXTURE_PATH = IdlFramework.MODID + ":" + "textures/gui/container/gui_demo.png";
+    private static final String TEXTURE_PATH = LobotomyCorp.MODID + ":" + "textures/gui/container/gui_demo.png";
     private static final ResourceLocation TEXTURE = new ResourceLocation(TEXTURE_PATH);
 
     private static final int BUTTON_UP = 0;

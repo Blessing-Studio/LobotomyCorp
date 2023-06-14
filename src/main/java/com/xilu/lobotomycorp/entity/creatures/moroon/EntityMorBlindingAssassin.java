@@ -70,7 +70,7 @@ public class EntityMorBlindingAssassin extends EntityMoroonUnitBase {
     @Override
     public void onUpdate() {
         super.onUpdate();
-        //IdlFramework.Log("Tick");
+        //LobotomyCorp.Log("Tick");
         if (!this.world.isRemote)
         {
             if (stealthCounter >= stealthNeedTick || this.world.isRainingAt(getPosition()))

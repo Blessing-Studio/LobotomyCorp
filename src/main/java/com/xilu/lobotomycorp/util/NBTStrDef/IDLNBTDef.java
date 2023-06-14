@@ -1,6 +1,6 @@
 package com.xilu.lobotomycorp.util.NBTStrDef;
 
-import com.xilu.lobotomycorp.IdlFramework;
+import com.xilu.lobotomycorp.LobotomyCorp;
 
 public class IDLNBTDef {
 	//GENERAL:
@@ -78,7 +78,7 @@ public class IDLNBTDef {
 
 	public static final String MODE = "mode";
 
-	public static final String STARTER_KIT_VERSION_TAG = "last_starter_kit_" + IdlFramework.MODID;
+	public static final String STARTER_KIT_VERSION_TAG = "last_starter_kit_" + LobotomyCorp.MODID;
     public static final int CUR_STARTER_KIT_VERSION = 2;
 
 	//edict

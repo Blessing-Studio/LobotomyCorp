@@ -6,7 +6,7 @@ import javax.annotation.Nullable;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
-import com.xilu.lobotomycorp.IdlFramework;
+import com.xilu.lobotomycorp.LobotomyCorp;
 import com.xilu.lobotomycorp.init.ModCreativeTab;
 import com.xilu.lobotomycorp.util.CommonFunctions;
 import com.xilu.lobotomycorp.util.IDLSkillNBT;
@@ -87,7 +87,7 @@ public class ItemArmorBase extends ItemArmor implements IHasModel {
 //	public void onUsingTick(ItemStack stack, EntityLivingBase living, int count) {
 //		//Particle;
 //		super.onUsingTick(stack, living, count);
-//		//IdlFramework.LogWarning(String.format("base onUsingTick %s",count));
+//		//LobotomyCorp.LogWarning(String.format("base onUsingTick %s",count));
 //
 //		if (living.world.isRemote)
 //		{
@@ -132,7 +132,7 @@ public class ItemArmorBase extends ItemArmor implements IHasModel {
 	@Override
 	public void registerModels() 
 	{
-		IdlFramework.proxy.registerItemRenderer(this, 0, "inventory");
+		LobotomyCorp.proxy.registerItemRenderer(this, 0, "inventory");
 	}
 
 

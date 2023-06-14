@@ -3,7 +3,7 @@ package com.xilu.lobotomycorp.command;
 import java.util.List;
 
 import com.google.common.collect.Lists;
-import com.xilu.lobotomycorp.IdlFramework;
+import com.xilu.lobotomycorp.LobotomyCorp;
 import com.xilu.lobotomycorp.util.CommonFunctions;
 import com.xilu.lobotomycorp.util.Teleport;
 import net.minecraft.command.CommandBase;
@@ -16,7 +16,7 @@ import net.minecraft.util.text.TextFormatting;
 
 public class CommandDimTeleport extends CommandBase {
 
-    private final List<String> aliases = Lists.newArrayList(IdlFramework.MODID, "tp", "tpdim", "tpdimension", "chuansong");
+    private final List<String> aliases = Lists.newArrayList(LobotomyCorp.MODID, "tp", "tpdim", "tpdimension", "chuansong");
 
     @Override
     public String getName() {

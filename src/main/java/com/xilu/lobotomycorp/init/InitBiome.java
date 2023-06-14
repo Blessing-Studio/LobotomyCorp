@@ -1,6 +1,6 @@
 package com.xilu.lobotomycorp.init;
 
-import com.xilu.lobotomycorp.IdlFramework;
+import com.xilu.lobotomycorp.LobotomyCorp;
 import net.minecraft.world.biome.Biome;
 import net.minecraftforge.common.BiomeDictionary;
 import net.minecraftforge.common.BiomeDictionary.Type;
@@ -19,7 +19,7 @@ public class InitBiome {
     {
         biome.setRegistryName(name);
         ForgeRegistries.BIOMES.register(biome);
-        IdlFramework.LogWarning("Biome registered:%s", name);
+        LobotomyCorp.LogWarning("Biome registered:%s", name);
         BiomeDictionary.addTypes(biome, type);
         BiomeManager.addBiome(biomeType, new BiomeEntry(biome, 10));
         BiomeManager.addSpawnBiome(biome);

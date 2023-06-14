@@ -6,6 +6,7 @@ import com.xilu.lobotomycorp.entity.ModEntityInit;
 import com.xilu.lobotomycorp.entity.RenderHandler;
 import com.xilu.lobotomycorp.item.ModItems;
 import com.xilu.lobotomycorp.util.IHasModel;
+import com.xilu.lobotomycorp.util.LogUtil;
 import com.xilu.lobotomycorp.util.ModSoundHandler;
 import net.minecraft.block.Block;
 import net.minecraft.enchantment.Enchantment;
@@ -40,7 +41,7 @@ public class RegistryHandler {
 		event.getRegistry().registerAll(ModEnchantmentInit.ENCHANTMENT_LIST.toArray(new Enchantment[0]));
 
 //		for (Enchantment enchantment : Enchantment.REGISTRY) {
-//			IdlFramework.Log("registered enchantments: %s", enchantment.getName());
+//			LobotomyCorp.Log("registered enchantments: %s", enchantment.getName());
 //		}
 	}
 
@@ -66,6 +67,10 @@ public class RegistryHandler {
 
 		RenderHandler.registerEntityRenders();
 	}
+
+//	@SubscribeEvent
+//	public static void onModGuiRegister() {
+//	}
 
 	public static void preInitRegistries(FMLPreInitializationEvent event)
 	{

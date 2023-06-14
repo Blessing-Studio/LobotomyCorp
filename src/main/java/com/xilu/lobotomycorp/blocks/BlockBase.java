@@ -2,7 +2,7 @@ package com.xilu.lobotomycorp.blocks;
 
 import java.util.Random;
 
-import com.xilu.lobotomycorp.IdlFramework;
+import com.xilu.lobotomycorp.LobotomyCorp;
 import com.xilu.lobotomycorp.init.ModCreativeTab;
 import com.xilu.lobotomycorp.item.ModItems;
 import com.xilu.lobotomycorp.util.IHasModel;
@@ -44,6 +44,6 @@ public class BlockBase extends Block implements IHasModel
 	
 	@Override
 	public void registerModels() {
-		IdlFramework.proxy.registerItemRenderer(Item.getItemFromBlock(this), 0, "inventory");
+		LobotomyCorp.proxy.registerItemRenderer(Item.getItemFromBlock(this), 0, "inventory");
 	}
 }

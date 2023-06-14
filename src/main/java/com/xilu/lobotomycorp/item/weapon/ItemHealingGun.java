@@ -30,11 +30,11 @@ public class ItemHealingGun extends ItemAdaptingBase {
 
     public void onCreatureStoppedUsing(ItemStack stack, World worldIn, EntityLivingBase entityLiving, int timeLeft)
     {
-        //IdlFramework.Log("onCreatureStoppedUsing");
+        //LobotomyCorp.Log("onCreatureStoppedUsing");
         Vec3d basePos = entityLiving.getPositionVector();
         float range = getRange(stack);
         List<EntityLivingBase> entities = worldIn.getEntitiesWithinAABB(EntityLivingBase.class, IDLGeneral.ServerAABB(basePos.addVector(-range, -range, -range), basePos.addVector(range, range, range)));
-        //IdlFramework.Log("found %d targets", entities.size());
+        //LobotomyCorp.Log("found %d targets", entities.size());
         for (EntityLivingBase target: entities
         ) {
             if (EntityUtil.getAttitude(entityLiving, target) == EntityUtil.ATTITUDE.FRIEND)
@@ -50,7 +50,7 @@ public class ItemHealingGun extends ItemAdaptingBase {
 
         if (worldIn.isRemote)
         {
-            //IdlFramework.Log("spawn particle!");
+            //LobotomyCorp.Log("spawn particle!");
             spawnParticles(EnumParticleTypes.VILLAGER_HAPPY, worldIn, entityLiving);
         }
 
@@ -67,7 +67,7 @@ public class ItemHealingGun extends ItemAdaptingBase {
         for (float angle = 0f; angle < maxAngle; angle += deltaAngle)
         {
            // float radius = center.getRNG().nextFloat() * speedMagnitude;
-            //IdlFramework.Log("spawn particle at %s, %s, %s", center.posX, center.posY, center.posZ);
+            //LobotomyCorp.Log("spawn particle at %s, %s, %s", center.posX, center.posY, center.posZ);
             center.world.spawnParticle(particleType, center.posX+Math.cos(angle),
                     center.getPositionEyes(0f).y,
                     center.posZ+Math.sin(angle),

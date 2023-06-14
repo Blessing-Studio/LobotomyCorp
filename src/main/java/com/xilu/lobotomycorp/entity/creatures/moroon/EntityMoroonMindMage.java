@@ -75,7 +75,7 @@ public class EntityMoroonMindMage extends EntityMoroonUnitBase implements IRange
     @Override
     public void onUpdate() {
         super.onUpdate();
-        //IdlFramework.Log("Tick");
+        //LobotomyCorp.Log("Tick");
         if (!this.world.isRemote)
         {
             //if (world.getWorldTime() % TICK_PER_SECOND == 1 && getActivePotionEffect(ModPotions.INTERFERENCE) == null)

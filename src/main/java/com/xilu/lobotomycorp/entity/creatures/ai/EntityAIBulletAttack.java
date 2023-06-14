@@ -92,12 +92,12 @@ public class EntityAIBulletAttack extends EntityAIBase
         }
         else
         {
-//            IdlFramework.LogWarning("cant see");
+//            LobotomyCorp.LogWarning("cant see");
             this.ticksLookingAtTarget = 0;
         }
 
-//        IdlFramework.Log(String.format("Looking ticks = %d", ticksLookingAtTarget ));
-//        IdlFramework.Log(String.format("dist = %.2f/%.2f", targetDistance, maxRange));
+//        LobotomyCorp.Log(String.format("Looking ticks = %d", ticksLookingAtTarget ));
+//        LobotomyCorp.Log(String.format("dist = %.2f/%.2f", targetDistance, maxRange));
         if (targetDistance <= maxRange && this.ticksLookingAtTarget >= 20)
         {
             this.entityHost.getNavigator().clearPath();

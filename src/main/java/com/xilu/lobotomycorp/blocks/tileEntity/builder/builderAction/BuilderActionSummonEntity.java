@@ -2,7 +2,7 @@ package com.xilu.lobotomycorp.blocks.tileEntity.builder.builderAction;
 
 import java.lang.reflect.InvocationTargetException;
 
-import com.xilu.lobotomycorp.IdlFramework;
+import com.xilu.lobotomycorp.LobotomyCorp;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Vec3d;
@@ -44,7 +44,7 @@ public class BuilderActionSummonEntity extends BuilderActionBase {
 
         } catch (NoSuchMethodException | InvocationTargetException | InstantiationException | IllegalAccessException e) {
             e.printStackTrace();
-            IdlFramework.LogWarning("A building process failed to summon creature");
+            LobotomyCorp.LogWarning("A building process failed to summon creature");
         }
         return super.Execute(world, ori_pos);
     }

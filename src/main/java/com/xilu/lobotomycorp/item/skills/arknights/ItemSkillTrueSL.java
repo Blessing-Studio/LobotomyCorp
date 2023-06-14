@@ -5,7 +5,7 @@ import java.util.UUID;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
-import com.xilu.lobotomycorp.IdlFramework;
+import com.xilu.lobotomycorp.LobotomyCorp;
 import com.xilu.lobotomycorp.util.CommonDef;
 import com.xilu.lobotomycorp.util.CommonFunctions;
 import com.xilu.lobotomycorp.util.EntityUtil;
@@ -142,7 +142,7 @@ public class ItemSkillTrueSL extends ItemArknightsSkillBase {
                         }
                     }
                     else {
-                        IdlFramework.Log("%s is not in front");
+                        LobotomyCorp.Log("%s is not in front");
                     }
                 }
             }

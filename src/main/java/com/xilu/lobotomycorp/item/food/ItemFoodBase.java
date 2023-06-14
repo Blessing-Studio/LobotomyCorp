@@ -2,7 +2,7 @@ package com.xilu.lobotomycorp.item.food;
 
 import java.util.List;
 
-import com.xilu.lobotomycorp.IdlFramework;
+import com.xilu.lobotomycorp.LobotomyCorp;
 import com.xilu.lobotomycorp.init.ModCreativeTab;
 import com.xilu.lobotomycorp.item.ModItems;
 import com.xilu.lobotomycorp.util.CommonFunctions;
@@ -72,7 +72,7 @@ public class ItemFoodBase extends ItemFood implements IHasModel {
     @Override
     public void registerModels()
     {
-        IdlFramework.proxy.registerItemRenderer(this, 0, "inventory");
+        LobotomyCorp.proxy.registerItemRenderer(this, 0, "inventory");
     }
 
     public ItemFoodBase(String name, int amount, float saturation, boolean isWolfFood) {
@@ -88,7 +88,7 @@ public class ItemFoodBase extends ItemFood implements IHasModel {
 
     protected void onFoodEaten(ItemStack stack, World worldIn, EntityPlayer player)
     {
-        //IdlFramework.Log("%s:on Food Eaten", getUnlocalizedName());
+        //LobotomyCorp.Log("%s:on Food Eaten", getUnlocalizedName());
         super.onFoodEaten(stack, worldIn, player);
         if (addXP > 0)
         {

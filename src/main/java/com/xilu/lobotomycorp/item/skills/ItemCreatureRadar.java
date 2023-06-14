@@ -2,7 +2,7 @@ package com.xilu.lobotomycorp.item.skills;
 
 import java.util.List;
 
-import com.xilu.lobotomycorp.IdlFramework;
+import com.xilu.lobotomycorp.LobotomyCorp;
 import com.xilu.lobotomycorp.util.CommonFunctions;
 import com.xilu.lobotomycorp.util.IDLGeneral;
 import com.xilu.lobotomycorp.util.NBTStrDef.IDLNBTDef;
@@ -55,7 +55,7 @@ public class ItemCreatureRadar extends ItemSkillBase {
                     //stack.writeToNBT(tagCompound);
                     //net.minecraft.item.ItemMonsterPlacer.applyEntityIdToItemStack(stack, name);
                     CommonFunctions.SafeSendMsgToPlayer(playerIn, getUnlocalizedName() + ".msg.success");
-                    IdlFramework.LogWarning(IDLNBTUtil.getNBT(stack).toString());
+                    LobotomyCorp.LogWarning(IDLNBTUtil.getNBT(stack).toString());
                     activateCoolDown(playerIn, stack);
                 }
 
@@ -87,7 +87,7 @@ public class ItemCreatureRadar extends ItemSkillBase {
 ////                        worldIn = entityIn.world;
 ////                    }
 ////                    int state = GetInt(stack, STATE);
-//                    //IdlFramework.Log("State = " + state);
+//                    //LobotomyCorp.Log("State = " + state);
 //                    return (float)GetInt(stack, STATE);
 //                }
 //            }
@@ -128,7 +128,7 @@ public class ItemCreatureRadar extends ItemSkillBase {
 
             Vec3d pos = entityIn.getPositionEyes(1.0F);
 
-            IdlFramework.Log("update:", IDLNBTUtil.getNBT(stack).toString());
+            LobotomyCorp.Log("update:", IDLNBTUtil.getNBT(stack).toString());
 
             Class s = getCreatureFromStack(stack);
             if (s == null)
@@ -140,11 +140,11 @@ public class ItemCreatureRadar extends ItemSkillBase {
                     IDLGeneral.ServerAABB(pos.addVector(-XZRangeRadius, -YRangeRadius, -XZRangeRadius), pos.addVector(XZRangeRadius, YRangeRadius, XZRangeRadius)));
             for (EntityLivingBase entity : entities)
             {
-                //IdlFramework.Log(String.format("[Active]Nearby %s -> %s" , entity.getName() ,entity.getAttackTarget()));
+                //LobotomyCorp.Log(String.format("[Active]Nearby %s -> %s" , entity.getName() ,entity.getAttackTarget()));
                 if (entity.getClass() == s && entity != entityIn)
                 {
                     detection++;
-                    //IdlFramework.Log("[Active]Detected!");
+                    //LobotomyCorp.Log("[Active]Detected!");
                 }
             }
 
@@ -152,7 +152,7 @@ public class ItemCreatureRadar extends ItemSkillBase {
             int detectionPre = IDLNBTUtil.GetInt(stack, IDLNBTDef.STATE);
             if (detectionPre != detection)//optimize
             {
-                IdlFramework.LogWarning("Changed to " + detection);
+                LobotomyCorp.LogWarning("Changed to " + detection);
                 IDLNBTUtil.SetInt(stack, IDLNBTDef.STATE, detection);
                 CommonFunctions.SendMsgToPlayerStyled((EntityPlayerMP) entityIn, msgKey, TextFormatting.YELLOW, detection);
                 //worldIn.playSound();

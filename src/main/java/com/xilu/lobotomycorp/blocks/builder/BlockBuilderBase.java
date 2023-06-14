@@ -1,6 +1,6 @@
 package com.xilu.lobotomycorp.blocks.builder;
 
-import com.xilu.lobotomycorp.IdlFramework;
+import com.xilu.lobotomycorp.LobotomyCorp;
 import com.xilu.lobotomycorp.blocks.BlockBase;
 import com.xilu.lobotomycorp.blocks.tileEntity.builder.TileEntityBuilderBase;
 import com.xilu.lobotomycorp.init.ModCreativeTab;
@@ -35,7 +35,7 @@ public class BlockBuilderBase extends BlockBase implements ITileEntityProvider {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
             e.printStackTrace();
-            IdlFramework.Log("Instantiate failed");
+            LobotomyCorp.Log("Instantiate failed");
         }
         return t;
     }

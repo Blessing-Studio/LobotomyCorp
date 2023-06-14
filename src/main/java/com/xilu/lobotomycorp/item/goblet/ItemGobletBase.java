@@ -120,7 +120,7 @@ public class ItemGobletBase extends ItemBase {
                 SetCacheEXP(stack, playerXP);
                 //stack.writeToNBT()
             }
-            //IdlFramework.Log(playerXP + " " + getUnlocalizedName(stack));
+            //LobotomyCorp.Log(playerXP + " " + getUnlocalizedName(stack));
         }
     }
 

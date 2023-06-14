@@ -1,6 +1,6 @@
 package com.xilu.lobotomycorp.network.protocols;
 
-import com.xilu.lobotomycorp.IdlFramework;
+import com.xilu.lobotomycorp.LobotomyCorp;
 import com.xilu.lobotomycorp.item.skills.ItemSkillBase;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.entity.player.EntityPlayerMP;
@@ -43,14 +43,14 @@ public class PacketTest implements IMessage {
             EntityPlayerMP player = ctx.getServerHandler().player;
 
             player.getServerWorld().addScheduledTask(() -> {
-                IdlFramework.Log("Packet:%d", msg.testVal);
+                LobotomyCorp.Log("Packet:%d", msg.testVal);
 
                 EnumHand hand = EnumHand.values()[msg.testVal];
 
                 ItemStack item = player.getHeldItem(hand);
                 if(item.isEmpty())
                 {
-                    IdlFramework.LogWarning("Trying to cast an empty item");
+                    LobotomyCorp.LogWarning("Trying to cast an empty item");
                 }
 
                 if(item.getItem() instanceof ItemSkillBase)

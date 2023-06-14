@@ -2,7 +2,7 @@ package com.xilu.lobotomycorp.item.skills;
 
 import java.util.List;
 
-import com.xilu.lobotomycorp.IdlFramework;
+import com.xilu.lobotomycorp.LobotomyCorp;
 import com.xilu.lobotomycorp.init.ModCreativeTab;
 import com.xilu.lobotomycorp.item.ItemBase;
 import com.xilu.lobotomycorp.util.CommonDef;
@@ -243,7 +243,7 @@ public class ItemSkillBase extends ItemBase {
                             CommonFunctions.SafeSendMsgToPlayer(TextFormatting.RED, (EntityPlayer) caster, MessageDef.NOT_CASTABLE_MAINHAND);
                         }
                         else {
-                            IdlFramework.LogWarning("Trying to do invalid cast from a creature: %s", caster.getName());
+                            LobotomyCorp.LogWarning("Trying to do invalid cast from a creature: %s", caster.getName());
                         }
                     }
                 } else if (hand == EnumHand.OFF_HAND)
@@ -255,7 +255,7 @@ public class ItemSkillBase extends ItemBase {
                             CommonFunctions.SafeSendMsgToPlayer(TextFormatting.RED, (EntityPlayer) caster, MessageDef.NOT_CASTABLE_OFFHAND);
                         }
                         else {
-                            IdlFramework.LogWarning("Trying to do invalid cast from a creature: %s", caster.getName());
+                            LobotomyCorp.LogWarning("Trying to do invalid cast from a creature: %s", caster.getName());
                         }
                     }
             }

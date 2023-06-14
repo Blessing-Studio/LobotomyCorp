@@ -89,7 +89,7 @@ public class ItemSkillGuaPalm extends ItemSkillMartialAttack implements IGuaEnha
                 {
                     ItemSkillGuaPalm palm = (ItemSkillGuaPalm) stack.getItem();
                     float dmg = evt.getAmount();
-                    //IdlFramework.Log("Damage reduct: %f -> %f", dmg, (1f - GetGuaEnhance(stack,0) * palm.earthModifier) * dmg);
+                    //LobotomyCorp.Log("Damage reduct: %f -> %f", dmg, (1f - GetGuaEnhance(stack,0) * palm.earthModifier) * dmg);
                     evt.setAmount((1f - IDLSkillNBT.GetGuaEnhance(stack,0) * palm.earthModifier) * dmg);
                 }
             }

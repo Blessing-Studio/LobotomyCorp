@@ -1,6 +1,6 @@
 package com.xilu.lobotomycorp.entity;
 
-import com.xilu.lobotomycorp.IdlFramework;
+import com.xilu.lobotomycorp.LobotomyCorp;
 import com.xilu.lobotomycorp.util.Reference;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
@@ -40,7 +40,7 @@ public class ModEntityInit {
                 entity,
                 name,
                 id,
-                IdlFramework.instance,
+                LobotomyCorp.instance,
                 range,
                 1,
                 true,

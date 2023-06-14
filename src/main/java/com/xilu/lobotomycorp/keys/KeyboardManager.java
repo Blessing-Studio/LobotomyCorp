@@ -1,6 +1,6 @@
 package com.xilu.lobotomycorp.keys;
 
-import com.xilu.lobotomycorp.IdlFramework;
+import com.xilu.lobotomycorp.LobotomyCorp;
 import com.xilu.lobotomycorp.proxy.ClientProxy;
 import net.minecraft.client.settings.KeyBinding;
 import net.minecraftforge.fml.client.registry.ClientRegistry;
@@ -20,7 +20,7 @@ public class KeyboardManager {
              ClientProxy.KEY_BINDINGS) {
             ClientRegistry.registerKeyBinding(key);
         }
-        IdlFramework.Log("Registered %d keys", ClientProxy.KEY_BINDINGS.size());
+        LobotomyCorp.Log("Registered %d keys", ClientProxy.KEY_BINDINGS.size());
     }
 
     @SideOnly(Side.CLIENT)
@@ -36,12 +36,12 @@ public class KeyboardManager {
 //            if(mc.currentScreen != null) return;
 //
 //            EnumHand hand = ClientProxy.CAST_OFFHAND.isKeyDown() ? EnumHand.MAIN_HAND : EnumHand.OFF_HAND;
-//            IdlFramework.Log("pressed key cast :" + hand);
+//            LobotomyCorp.Log("pressed key cast :" + hand);
 //
 //            ItemStack item = player.getHeldItem(hand);
 //            if(item.isEmpty())
 //            {
-//                IdlFramework.LogWarning("Trying to cast an empty item");
+//                LobotomyCorp.LogWarning("Trying to cast an empty item");
 //            }
 //
 //            if(item.getItem() instanceof ItemSkillBase)

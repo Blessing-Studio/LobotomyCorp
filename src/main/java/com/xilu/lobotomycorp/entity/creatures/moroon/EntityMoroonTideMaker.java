@@ -78,7 +78,7 @@ public class EntityMoroonTideMaker extends EntityMoroonUnitBase {
     @Override
     public void onUpdate() {
         super.onUpdate();
-        //IdlFramework.Log("Tick");
+        //LobotomyCorp.Log("Tick");
         if (!this.world.isRemote)
         {
             int i = MathHelper.floor(this.posX);

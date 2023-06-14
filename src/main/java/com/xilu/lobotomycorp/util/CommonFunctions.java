@@ -3,7 +3,7 @@ package com.xilu.lobotomycorp.util;
 import java.util.Calendar;
 import java.util.Random;
 
-import com.xilu.lobotomycorp.IdlFramework;
+import com.xilu.lobotomycorp.LobotomyCorp;
 import com.xilu.lobotomycorp.item.ItemBase;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.client.resources.I18n;
@@ -183,7 +183,7 @@ public class CommonFunctions {
     }
 
     public static void LogPlayerAction(EntityLivingBase living, String action){
-        IdlFramework.Log(String.format("%s(%s): %s",living.getName(), living.getUniqueID(), action));
+        LobotomyCorp.Log(String.format("%s(%s): %s",living.getName(), living.getUniqueID(), action));
     }
 
     public static boolean RepairItem(ItemStack stack, int amount)
@@ -258,20 +258,20 @@ public class CommonFunctions {
             {
                 player.experience -= costLeft;
                 costLeft = 0;
-                IdlFramework.Log("A");
+                LobotomyCorp.Log("A");
             }
             else {
                 costLeft -= player.experience;
-                IdlFramework.Log("B");
+                LobotomyCorp.Log("B");
                 if (player.experienceLevel > 0)
                 {
                     player.experienceLevel--;
                     player.experience = XPForLevel(player.experienceLevel);
-                    IdlFramework.Log(String.format("player.experience = %d", XPForLevel(player.experienceLevel)));
+                    LobotomyCorp.Log(String.format("player.experience = %d", XPForLevel(player.experienceLevel)));
                 }
             }
         }
-        IdlFramework.Log(String.format("Lv= %s, xp = %s", player.experienceLevel, player.experience));
+        LobotomyCorp.Log(String.format("Lv= %s, xp = %s", player.experienceLevel, player.experience));
         return true;
     }
 

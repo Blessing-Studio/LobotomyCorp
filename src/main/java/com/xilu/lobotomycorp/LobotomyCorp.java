@@ -11,6 +11,8 @@ import com.xilu.lobotomycorp.network.NetworkHandler;
 import com.xilu.lobotomycorp.proxy.ProxyBase;
 import com.xilu.lobotomycorp.util.CommonDef;
 import com.xilu.lobotomycorp.util.Reference;
+import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -23,18 +25,29 @@ import org.apache.logging.log4j.Logger;
 
 //To let the player be a traveling god who plays yin-yang magic.
 
-@Mod(modid = IdlFramework.MODID, name = IdlFramework.NAME, version = IdlFramework.VERSION)//dependencies = "required-after:Forge@[14.23.5.2705,)"
-public class IdlFramework {
+@Mod(modid = LobotomyCorp.MODID, name = LobotomyCorp.NAME, version = LobotomyCorp.VERSION)//dependencies = "required-after:Forge@[14.23.5.2705,)"
+public class LobotomyCorp {
     public static final String MODID = "lobotomycorp";
     public static final String NAME = "Lobotomy Corp";
     public static final String VERSION = "0.1.101";
+
+    public static final ResourceLocation GUI_TEXTURE = new ResourceLocation(MODID, "textures/gui/container/gui_demo.png");
+    public static final int GUI_WIDTH = 64;
+    public static final int GUI_HEIGHT = 64;
+
+    public static final int MAX_PSYCHIC = 100;
+    public static final int PSYCHIC_REGEN_RATE = 1;
+    public static final int PSYCHIC_DEPLETION_RATE = 2;
+
+    private int psychic = MAX_PSYCHIC;
+    private int psychicRegenTimer = 0;
 
     public static Logger logger;
 
     public static final boolean SHOW_WARN = true;
 
     @Mod.Instance
-    public static IdlFramework instance;
+    public static LobotomyCorp instance;
 
     @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
     public static ProxyBase proxy;
@@ -43,20 +56,8 @@ public class IdlFramework {
     public void preInit(FMLPreInitializationEvent event) {
         logger = event.getModLog();
 
-        if (MODID.equals("untitled"))
-        {
-            logger.error("Please change your mod id in the main class.");
-            
-        }
-
-        if (Reference.CLIENT_PROXY_CLASS.indexOf("xilu.lobotomycorp.proxy.ClientProxy") > 0)
-        {
-            logger.warn("Have you changed your package name to author and modname?");
-            
-        }
-
         RegistryHandler.preInitRegistries(event);
-
+        MinecraftForge.EVENT_BUS.register(this);
     }
 
     @EventHandler
@@ -71,8 +72,7 @@ public class IdlFramework {
         }
         NetworkHandler.init();
 
-		LogWarning("%s has finished its initializations", MODID);
-
+		Log("%s has finished its initializations", MODID);
 	}
 
     @EventHandler
@@ -104,14 +104,17 @@ public class IdlFramework {
         RegistryHandler.serverRegistries(event);
     }
 
+    @Mod.EventHandler
+    public void init(FMLInitializationEvent event) {
+    }
 
     private void TrashTalking() {
         if (MetaUtil.isIDLLoaded)
         {
-            IdlFramework.Log("[Idealland Framework] Bow to Idealland.");
+            LobotomyCorp.Log("[Idealland Framework] Bow to Idealland.");
         }
         else {
-            IdlFramework.Log("[Idealland Framework] Made with Idealland Framework.");
+            LobotomyCorp.Log("[Idealland Framework] Made with Idealland Framework.");
         }
     }
 

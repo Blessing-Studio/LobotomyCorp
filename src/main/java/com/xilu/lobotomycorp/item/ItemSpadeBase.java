@@ -2,7 +2,7 @@ package com.xilu.lobotomycorp.item;
 
 import java.util.List;
 
-import com.xilu.lobotomycorp.IdlFramework;
+import com.xilu.lobotomycorp.LobotomyCorp;
 import com.xilu.lobotomycorp.init.ModCreativeTab;
 import com.xilu.lobotomycorp.util.CommonFunctions;
 import com.xilu.lobotomycorp.util.IDLSkillNBT;
@@ -109,7 +109,7 @@ public class ItemSpadeBase extends ItemSpade implements IHasModel {
 	@Override
 	public void registerModels() 
 	{
-		IdlFramework.proxy.registerItemRenderer(this, 0, "inventory");
+		LobotomyCorp.proxy.registerItemRenderer(this, 0, "inventory");
 	}
 	@SideOnly(Side.CLIENT)
 	@Override

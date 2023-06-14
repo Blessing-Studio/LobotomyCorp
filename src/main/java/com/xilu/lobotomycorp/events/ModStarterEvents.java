@@ -13,7 +13,7 @@ public class ModStarterEvents {
 	  @SubscribeEvent
 	  public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
 		  EntityPlayer player = event.player;
-		  //IdlFramework.Log(getPlyrIdlTagSafe(player).toString());
+		  //LobotomyCorp.Log(getPlyrIdlTagSafe(player).toString());
 		  int lastStarterVer = IDLNBT.getPlayerIdeallandIntSafe(player, IDLNBTDef.STARTER_KIT_VERSION_TAG);
 		  if(lastStarterVer < IDLNBTDef.CUR_STARTER_KIT_VERSION) {
 //			  IDLNBT.setPlayerIdeallandTagSafe(player, STARTER_KIT_VERSION_TAG, CUR_STARTER_KIT_VERSION);
@@ -24,7 +24,7 @@ public class ModStarterEvents {
 //			  if (player instanceof EntityPlayerMP) {
 //				  CommonFunctions.SendMsgToPlayerStyled((EntityPlayerMP)player, "lobotomycorp.msg.starter_kit_given", TextFormatting.AQUA);
 //			  }
-//			  IdlFramework.Log(String.format("Given starter items to player %s, ver %d", player.getDisplayNameString(), CUR_STARTER_KIT_VERSION));
+//			  LobotomyCorp.Log(String.format("Given starter items to player %s, ver %d", player.getDisplayNameString(), CUR_STARTER_KIT_VERSION));
 		  }
 	  }
 	

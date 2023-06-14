@@ -3,6 +3,7 @@ package com.xilu.lobotomycorp.item.weapon;
 import com.xilu.lobotomycorp.item.ItemSwordBase;
 import com.xilu.lobotomycorp.util.CommonFunctions;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
@@ -33,4 +34,5 @@ public class ItemPenitence extends ItemSwordBase {
             }
         }
     }
+
 }

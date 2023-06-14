@@ -1,6 +1,6 @@
 package com.xilu.lobotomycorp.item.misc;
 
-import com.xilu.lobotomycorp.IdlFramework;
+import com.xilu.lobotomycorp.LobotomyCorp;
 import com.xilu.lobotomycorp.item.ItemBase;
 import com.xilu.lobotomycorp.util.Reference;
 import net.minecraft.entity.Entity;
@@ -48,7 +48,7 @@ public class ItemSummon extends ItemBase {
             {
                 EntityLivingBase entityLivingBase = (EntityLivingBase) entity;
                 entityLivingBase.setPosition(pos.getX() + 0.5f,pos.getY() + 1f,pos.getZ() + 0.5f);
-                IdlFramework.Log("Spawned: %s @ %s", entityLivingBase.getName(), entityLivingBase.getPosition());
+                LobotomyCorp.Log("Spawned: %s @ %s", entityLivingBase.getName(), entityLivingBase.getPosition());
                 worldIn.spawnEntity(entityLivingBase);
 //                if (entityLivingBase instanceof EntityLiving)
 //                {
@@ -57,7 +57,7 @@ public class ItemSummon extends ItemBase {
             }
             else {
                 if (doWarn)
-                    IdlFramework.LogWarning("Trying to summon a non-living entity");
+                    LobotomyCorp.LogWarning("Trying to summon a non-living entity");
             }
         }
 

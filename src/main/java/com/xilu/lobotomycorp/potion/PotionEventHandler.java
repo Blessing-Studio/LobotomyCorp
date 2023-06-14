@@ -108,9 +108,9 @@ public class PotionEventHandler {
                     }
 
                     evt.setAmount((critDmg) * evt.getAmount());
-                    //IdlFramework.Log(String.format("%s:isCrit = %s, x%s =%s, ", trueSource.getName(), isCritical, critDmg, evt.getAmount()));
+                    //LobotomyCorp.Log(String.format("%s:isCrit = %s, x%s =%s, ", trueSource.getName(), isCritical, critDmg, evt.getAmount()));
                 }
-                //IdlFramework.Log(String.format("%s:isCrit = %s, x1f =%s, ", trueSource.getName(), isCritical, evt.getAmount()));
+                //LobotomyCorp.Log(String.format("%s:isCrit = %s, x1f =%s, ", trueSource.getName(), isCritical, evt.getAmount()));
             }
         }
 

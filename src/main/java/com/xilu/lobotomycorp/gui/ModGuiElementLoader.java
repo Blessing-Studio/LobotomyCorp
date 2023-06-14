@@ -2,7 +2,7 @@ package com.xilu.lobotomycorp.gui;
 
 import javax.annotation.Nullable;
 
-import com.xilu.lobotomycorp.IdlFramework;
+import com.xilu.lobotomycorp.LobotomyCorp;
 import com.xilu.lobotomycorp.gui.expOne.ContainerDemo;
 import com.xilu.lobotomycorp.gui.expOne.GuiContainerDemo;
 import net.minecraft.entity.player.EntityPlayer;
@@ -19,7 +19,7 @@ public class ModGuiElementLoader implements IGuiHandler {
 
     public ModGuiElementLoader()
     {
-        NetworkRegistry.INSTANCE.registerGuiHandler(IdlFramework.instance, this);
+        NetworkRegistry.INSTANCE.registerGuiHandler(LobotomyCorp.instance, this);
     }
 
     @Nullable

@@ -7,7 +7,7 @@ import java.util.UUID;
 import javax.annotation.Nullable;
 
 import com.google.common.base.Predicate;
-import com.xilu.lobotomycorp.IdlFramework;
+import com.xilu.lobotomycorp.LobotomyCorp;
 import com.xilu.lobotomycorp.entity.creatures.EntityModUnit;
 import com.xilu.lobotomycorp.meta.MetaUtil;
 import net.minecraft.entity.Entity;
@@ -33,7 +33,7 @@ import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
 
-@Mod.EventBusSubscriber(modid = IdlFramework.MODID)
+@Mod.EventBusSubscriber(modid = LobotomyCorp.MODID)
 public class EntityUtil {
     public static void simpleKnockBack(float power, EntityLivingBase source, EntityLivingBase target)
     {
@@ -69,7 +69,7 @@ public class EntityUtil {
     {
         if (livingBase == null || potion == null)
         {
-            IdlFramework.LogWarning("Trying to apply illegal potion");
+            LobotomyCorp.LogWarning("Trying to apply illegal potion");
             return false;
         }
         livingBase.addPotionEffect(new PotionEffect(potion, (int) (seconds * CommonDef.TICK_PER_SECOND) + 1, level));
@@ -123,7 +123,7 @@ public class EntityUtil {
             return false;
         }
         String modid = er.getContainer().getModId();
-        //IdlFramework.Log("Atk ER.modid is %s, name is %s", modid, er.getRegistryName());
+        //LobotomyCorp.Log("Atk ER.modid is %s, name is %s", modid, er.getRegistryName());
 
         return !modid.equals("minecraft");
     }
@@ -514,7 +514,7 @@ public class EntityUtil {
             modifier = attribute.getModifier(uuid);
         }
 
-        //IdlFramework.Log("Value:%s: %.2f->%.2f", modifier.getName(), valueBefore, valueAfter);
+        //LobotomyCorp.Log("Value:%s: %.2f->%.2f", modifier.getName(), valueBefore, valueAfter);
         return true;
     }
 
@@ -548,7 +548,7 @@ public class EntityUtil {
             modifier = attribute.getModifier(uuid);
         }
 
-        //IdlFramework.Log("Value:%s: %.2f->%.2f", modifier.getName(), valueBefore, valueAfter);
+        //LobotomyCorp.Log("Value:%s: %.2f->%.2f", modifier.getName(), valueBefore, valueAfter);
         return true;
     }
 

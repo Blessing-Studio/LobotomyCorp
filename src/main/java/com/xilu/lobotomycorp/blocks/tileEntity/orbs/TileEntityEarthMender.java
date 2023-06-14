@@ -91,14 +91,14 @@ public class TileEntityEarthMender extends TileEntityOrbBase implements ITickabl
 //	//No Use
 //	@SubscribeEvent
 //	public void onSpawn(LivingSpawnEvent.CheckSpawn event) {
-//		IdlFramework.Log("Spawning:"+event.getEntityLiving().getName());
+//		LobotomyCorp.Log("Spawning:"+event.getEntityLiving().getName());
 //		int range = NULLIFY_DISTANCE;
 //		if(event.getResult() != Event.Result.ALLOW && event.getEntityLiving() instanceof IMob) {
 //			AxisAlignedBB aabb = new AxisAlignedBB(event.getX() - NULLIFY_DISTANCE, event.getY() - NULLIFY_DISTANCE, event.getZ() - NULLIFY_DISTANCE, event.getX() + NULLIFY_DISTANCE, event.getY() + NULLIFY_DISTANCE, event.getZ() + NULLIFY_DISTANCE);
 //			if (aabb.contains(new Vec3d(this.pos.getX(), this.pos.getY(), this.pos.getZ())))
 //			{
 //				event.setResult(Event.Result.DENY);
-//				IdlFramework.Log("Stopped spawning:"+event.getEntityLiving().getName());
+//				LobotomyCorp.Log("Stopped spawning:"+event.getEntityLiving().getName());
 //				return;
 //			}
 //		}

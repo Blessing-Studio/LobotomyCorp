@@ -24,7 +24,7 @@ public class ModConfig {
     }
 
     @Config.LangKey("configgui.lobotomycorp.category.Menu0.GeneralConf")
-    @Config.Comment("IdlFramework general config.")
+    @Config.Comment("LobotomyCorp general config.")
     public static final GeneralConf GeneralConf = new GeneralConf();
 
     public static class GeneralConf {

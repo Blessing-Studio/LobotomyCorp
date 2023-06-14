@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.annotation.Nullable;
 
-import com.xilu.lobotomycorp.IdlFramework;
+import com.xilu.lobotomycorp.LobotomyCorp;
 import com.xilu.lobotomycorp.util.Reference;
 import net.minecraft.potion.Potion;
 import net.minecraft.util.ResourceLocation;
@@ -41,6 +41,6 @@ public class ModPotions {
         //VIRUS_ONE.tuples.add(new EffectTuple(0.2f, MobEffects.NAUSEA, 100));
 
         evt.getRegistry().registerAll(INSTANCES.toArray(new Potion[0]));
-        IdlFramework.LogWarning("registered %d potion", INSTANCES.size());
+        LobotomyCorp.LogWarning("registered %d potion", INSTANCES.size());
     }
 }

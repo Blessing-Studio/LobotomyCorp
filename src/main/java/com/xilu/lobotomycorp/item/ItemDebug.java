@@ -2,7 +2,7 @@ package com.xilu.lobotomycorp.item;
 
 import java.util.List;
 
-import com.xilu.lobotomycorp.IdlFramework;
+import com.xilu.lobotomycorp.LobotomyCorp;
 import com.xilu.lobotomycorp.entity.projectiles.EntityIdlProjectile;
 import com.xilu.lobotomycorp.entity.projectiles.ProjectileArgs;
 import com.xilu.lobotomycorp.gui.ModGuiElementLoader;
@@ -70,7 +70,7 @@ public class ItemDebug extends ItemBase{
             boolean judge2 = enchantment.canApplyAtEnchantingTable(testItemStack);
             boolean judge3 = flag && enchantment.isAllowedOnBooks();
 
-            IdlFramework.Log("[%s]Lv %d to %d, canApplyAtEnchantingTable = %s, judgement[%s,%s,%s]",
+            LobotomyCorp.Log("[%s]Lv %d to %d, canApplyAtEnchantingTable = %s, judgement[%s,%s,%s]",
                     enchantment.getName(),
                     enchantment.getMinLevel(),
                     enchantment.getMaxLevel(),
@@ -81,11 +81,11 @@ public class ItemDebug extends ItemBase{
             {
                 for (int i = enchantment.getMaxLevel(); i >= enchantment.getMinLevel() ; --i)
                 {
-                    IdlFramework.Log("[%s] Lv.%d available range = %d to %d", enchantment.getName(), i,
+                    LobotomyCorp.Log("[%s] Lv.%d available range = %d to %d", enchantment.getName(), i,
                             enchantment.getMinEnchantability(i), enchantment.getMaxEnchantability(i));
                     if (p_185291_0_ >= enchantment.getMinEnchantability(i) && p_185291_0_ <= enchantment.getMaxEnchantability(i))
                     {
-                        IdlFramework.Log("[%s] successfully elected", enchantment.getName());
+                        LobotomyCorp.Log("[%s] successfully elected", enchantment.getName());
                         break;
                     }
                 }
@@ -103,7 +103,7 @@ public class ItemDebug extends ItemBase{
         if (index == 2 && !worldIn.isRemote) {
             EntityIdlProjectile bullet = new EntityIdlProjectile(worldIn, new ProjectileArgs(4f), playerIn, 0, 0.05, 0);
             worldIn.spawnEntity(bullet);
-            IdlFramework.Log("bullet pos = %s", bullet.getPosition());
+            LobotomyCorp.Log("bullet pos = %s", bullet.getPosition());
             worldIn.playSound(playerIn, playerIn.getPosition(), SoundEvents.ENTITY_PLAYER_LEVELUP, SoundCategory.PLAYERS, 1f, 1f);
             //return
         }
@@ -114,19 +114,19 @@ public class ItemDebug extends ItemBase{
             if (index == 3)
             {
                 BlockPos pos = playerIn.getPosition();
-                playerIn.openGui(IdlFramework.instance, ModGuiElementLoader.GUI_RESEARCH, worldIn, pos.getX(), pos.getY(), pos.getZ());
+                playerIn.openGui(LobotomyCorp.instance, ModGuiElementLoader.GUI_RESEARCH, worldIn, pos.getX(), pos.getY(), pos.getZ());
             }
             //else
 
             //todo: optimize
-            //playerIn.openGui(IdlFramework.instance, ModGuiElementLoader.GUI_DEMO, worldIn, pos.getX(), pos.getY(), pos.getZ());
+            //playerIn.openGui(LobotomyCorp.instance, ModGuiElementLoader.GUI_DEMO, worldIn, pos.getX(), pos.getY(), pos.getZ());
 
 //            for (int i = 1; i <= 1000; i++)
 //            {
 //                IDLNBTUtil.SetString(stack, "TEST", IDLNBTUtil.GetString(stack, "TEST", "") + "a");
 //            }
         }
-        //IdlFramework.Log("NBT len = %d", IDLNBTUtil.GetString(stack, "TEST", "").length());
+        //LobotomyCorp.Log("NBT len = %d", IDLNBTUtil.GetString(stack, "TEST", "").length());
 
         //IDLSkillNBT.SetGuaEnhanceFree(playerIn.getHeldItem(handIn), 2);
         return super.onItemRightClick(worldIn, playerIn, handIn);

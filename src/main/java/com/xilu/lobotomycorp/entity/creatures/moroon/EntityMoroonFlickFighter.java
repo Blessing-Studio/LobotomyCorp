@@ -77,7 +77,7 @@ public class EntityMoroonFlickFighter extends EntityMoroonUnitBase {
     @Override
     public void onUpdate() {
         super.onUpdate();
-        //IdlFramework.Log("Tick");
+        //LobotomyCorp.Log("Tick");
         if (!this.world.isRemote)
         {
             if (world.getWorldTime() % CommonDef.TICK_PER_SECOND == 0) {

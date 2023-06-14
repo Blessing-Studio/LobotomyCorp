@@ -1,6 +1,6 @@
 package com.xilu.lobotomycorp.item.skills.arknights;
 
-import com.xilu.lobotomycorp.IdlFramework;
+import com.xilu.lobotomycorp.LobotomyCorp;
 import com.xilu.lobotomycorp.item.skills.ItemSkillBase;
 import com.xilu.lobotomycorp.util.CommonDef;
 import com.xilu.lobotomycorp.util.CommonFunctions;
@@ -116,7 +116,7 @@ public class ItemArknightsSkillBase extends ItemSkillBase {
                     dura = 0;
                     IDLSkillNBT.SetCasting(stack, false);
                     activateCoolDownArknights(stack);
-                    IdlFramework.Log("%s casting complete.", entityIn);
+                    LobotomyCorp.Log("%s casting complete.", entityIn);
                 }
 
                 IDLSkillNBT.SetDura(stack, dura);

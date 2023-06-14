@@ -35,7 +35,7 @@ public class EntityHiredSkeleton extends EntitySkeleton {
     @Override
     public void onEntityUpdate() {
         super.onEntityUpdate();
-        //IdlFramework.Log(getPositionVector() + " " + getUniqueID().toString());
+        //LobotomyCorp.Log(getPositionVector() + " " + getUniqueID().toString());
     }
 
     protected boolean shouldBurnInDay()
