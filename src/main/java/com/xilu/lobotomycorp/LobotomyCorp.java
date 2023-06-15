@@ -1,17 +1,20 @@
 package com.xilu.lobotomycorp;
 
 import com.xilu.lobotomycorp.gui.ModGuiElementLoader;
-import com.xilu.lobotomycorp.init.ModConfig;
-import com.xilu.lobotomycorp.init.ModRecipes;
-import com.xilu.lobotomycorp.init.ModSpawn;
-import com.xilu.lobotomycorp.init.RegistryHandler;
+import com.xilu.lobotomycorp.handler.CapabilityHandler;
+import com.xilu.lobotomycorp.handler.MentalityOverlayHandler;
+import com.xilu.lobotomycorp.init.*;
+import com.xilu.lobotomycorp.interfaces.IMentality;
 import com.xilu.lobotomycorp.keys.KeyboardManager;
 import com.xilu.lobotomycorp.meta.MetaUtil;
 import com.xilu.lobotomycorp.network.NetworkHandler;
 import com.xilu.lobotomycorp.proxy.ProxyBase;
 import com.xilu.lobotomycorp.util.CommonDef;
 import com.xilu.lobotomycorp.util.Reference;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.entity.EntityPlayerSP;
 import net.minecraft.util.ResourceLocation;
+import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Loader;
 import net.minecraftforge.fml.common.Mod;
@@ -21,6 +24,7 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPostInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.event.FMLServerStartingEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import org.apache.logging.log4j.Logger;
 
 //To let the player be a traveling god who plays yin-yang magic.
@@ -30,17 +34,6 @@ public class LobotomyCorp {
     public static final String MODID = "lobotomycorp";
     public static final String NAME = "Lobotomy Corp";
     public static final String VERSION = "0.1.101";
-
-    public static final ResourceLocation GUI_TEXTURE = new ResourceLocation(MODID, "textures/gui/container/gui_demo.png");
-    public static final int GUI_WIDTH = 64;
-    public static final int GUI_HEIGHT = 64;
-
-    public static final int MAX_PSYCHIC = 100;
-    public static final int PSYCHIC_REGEN_RATE = 1;
-    public static final int PSYCHIC_DEPLETION_RATE = 2;
-
-    private int psychic = MAX_PSYCHIC;
-    private int psychicRegenTimer = 0;
 
     public static Logger logger;
 
@@ -56,8 +49,8 @@ public class LobotomyCorp {
     public void preInit(FMLPreInitializationEvent event) {
         logger = event.getModLog();
 
+        ModInits.init();
         RegistryHandler.preInitRegistries(event);
-        MinecraftForge.EVENT_BUS.register(this);
     }
 
     @EventHandler
