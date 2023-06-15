@@ -74,7 +74,7 @@ public class ItemSkillBase extends ItemBase {
         super(name);
         setMaxStackSize(1);
         setNoRepair();
-        setCreativeTab(ModCreativeTab.IDL_MISC);
+        setCreativeTab(ModCreativeTab.LC_EGO_WEAPON);
     }
 
     @Override

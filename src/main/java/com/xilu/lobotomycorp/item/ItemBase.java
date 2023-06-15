@@ -46,7 +46,7 @@ public class ItemBase extends Item implements IHasModel {
 	{
 		setUnlocalizedName(name);
 		setRegistryName(name);
-		setCreativeTab(ModCreativeTab.IDL_MISC);
+		setCreativeTab(ModCreativeTab.LC_EGO_WEAPON);
 		
 		ModItems.ITEMS.add(this);
 

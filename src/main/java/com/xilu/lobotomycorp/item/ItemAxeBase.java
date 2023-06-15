@@ -38,7 +38,7 @@ public class ItemAxeBase extends ItemAxe implements IHasModel {
 		super(material, 8.0F, -2.8F);
 		setUnlocalizedName(name);
 		setRegistryName(name);
-		setCreativeTab(ModCreativeTab.IDL_MISC);
+		setCreativeTab(ModCreativeTab.LC_EGO_WEAPON);
 		toolMaterial = material;
 		ModItems.ITEMS.add(this);
 

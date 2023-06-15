@@ -1,5 +1,6 @@
 # PARSE_ESCAPES
-itemGroup.lc_item_Tab=脑叶公司 E.G.O
+itemGroup.lc_ego_weapon_Tab=脑叶公司 E.G.O 武器
+itemGroup.lc_item_Tab=脑叶公司 物品
 
 generator.TYPE_ONE=Type One;
 generator.TYPE_TWO=Type Two;
@@ -18,7 +19,9 @@ item.lc_item_cogito.name=Cogito 药剂
 
 # E.G.O
 item.lc_item_penitence.name=忏悔
+item.lc_item_penitence.desc=唯有理解才能获取知识\n这把武器虽不像其它装备那般强大，但它能为持有者提供心灵上的慰藉\n持有者的正义等级高于2级时，每次攻击都有5%的概率恢复2点精神值
 
+item.lc_item_wingbeat.name=翅振
 
 
 idealland.moroon_incoming_herald=[IDL][注意] 摩隆密切关注着你的战斗。

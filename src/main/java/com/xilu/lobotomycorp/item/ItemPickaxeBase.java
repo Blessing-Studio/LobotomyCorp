@@ -38,7 +38,7 @@ public class ItemPickaxeBase extends ItemPickaxe implements IHasModel {
 		super(material);
 		setUnlocalizedName(name);
 		setRegistryName(name);
-		setCreativeTab(ModCreativeTab.IDL_MISC);
+		setCreativeTab(ModCreativeTab.LC_EGO_WEAPON);
 		toolMaterial = material;
 		ModItems.ITEMS.add(this);
 

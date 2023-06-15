@@ -79,7 +79,7 @@ public class ItemFoodBase extends ItemFood implements IHasModel {
         super(amount, saturation, isWolfFood);
         setUnlocalizedName(name);
         setRegistryName(name);
-        setCreativeTab(ModCreativeTab.IDL_MISC);
+        setCreativeTab(ModCreativeTab.LC_EGO_WEAPON);
 
         ModItems.ITEMS.add(this);
 

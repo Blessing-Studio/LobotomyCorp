@@ -8,8 +8,17 @@ import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ModCreativeTab {
-	public static final CreativeTabs IDL_MISC = new CreativeTabs(CreativeTabs.getNextID(), "lc_item_Tab")
+	public static final CreativeTabs LC_EGO_WEAPON = new CreativeTabs(CreativeTabs.getNextID(), "lc_ego_weapon_Tab")
 	{
+        @SideOnly(Side.CLIENT)
+        public ItemStack getTabIconItem()
+        {
+            return new ItemStack(ModItems.LC_EGO_PENITENCE);
+        }
+    };
+
+    public static final CreativeTabs LC_ITEM = new CreativeTabs(CreativeTabs.getNextID(), "lc_item_Tab")
+    {
         @SideOnly(Side.CLIENT)
         public ItemStack getTabIconItem()
         {

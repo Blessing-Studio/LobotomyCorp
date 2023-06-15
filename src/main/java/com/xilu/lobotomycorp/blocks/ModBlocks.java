@@ -16,5 +16,5 @@ public class ModBlocks {
 	 * -Add corresponding texture png
 	 */
 
-	//public static final Block GRID_BLOCK_1 = new BlockBase("test", Material.CLAY).setCreativeTab(ModCreativeTab.IDL_MISC).setHardness(15f);
+	//public static final Block GRID_BLOCK_1 = new BlockBase("test", Material.CLAY).setCreativeTab(ModCreativeTab.LC_EGO_WEAPON).setHardness(15f);
 }

@@ -9,12 +9,13 @@ public class PlayerEventHandler {
     public void onLivingAttack(LivingAttackEvent event) {
         if (event.getEntity() instanceof EntityPlayer) {
             EntityPlayer player = (EntityPlayer) event.getEntity();
-            if(MentalityOverlayHandler.mentalityValue <= 0 || MentalityOverlayHandler.mentalityValue - 2 <= 0){
-                player.setDead();
-                MentalityOverlayHandler.setMentalityValue(20);
-            } else if (MentalityOverlayHandler.mentalityValue - 2 > 0) {
+            if (event.getSource().getTrueSource() instanceof EntityPlayer && event.getSource().getTrueSource() != player) {
                 MentalityOverlayHandler.setMentalityValue(MentalityOverlayHandler.mentalityValue - 2);
+                if (MentalityOverlayHandler.mentalityValue <= 0) {
+                    player.setHealth(0.0f); // 先将玩家设置为不可被伤害的状态
+                    player.setDead(); // 再调用 setDead() 方法
+                    MentalityOverlayHandler.setMentalityValue(20);
+                }
             }
         }
-    }
-}
+    }}

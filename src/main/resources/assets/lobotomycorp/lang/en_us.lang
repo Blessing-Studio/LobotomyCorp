@@ -15,8 +15,10 @@ enchantment.lobotomycorp.mental_damage=Mental Damage
 enchantment.lobotomycorp.erosion_damage=Erosion Damage
 enchantment.lobotomycorp.spirit_damage=Spirit Damage
 
+#E.G.O
 item.lc_item_cogito.name=Cogito
 item.lc_item_penitence.name=Penitence
+item.lc_item_wingbeat.name=Wingbeat
 
 
 

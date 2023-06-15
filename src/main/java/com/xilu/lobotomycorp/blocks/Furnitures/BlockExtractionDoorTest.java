@@ -37,7 +37,7 @@ public class BlockExtractionDoorTest extends BlockBase {
         setLightOpacity(1);
 
         this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, BlockExtractionDoorTest.EnumOrientation.NORTH).withProperty(POWERED, Boolean.valueOf(false)));
-        this.setCreativeTab(ModCreativeTab.IDL_MISC);
+        this.setCreativeTab(ModCreativeTab.LC_EGO_WEAPON);
     }
 
     public static final PropertyEnum<BlockExtractionDoorTest.EnumOrientation> FACING = PropertyEnum.create("facing", BlockExtractionDoorTest.EnumOrientation.class);
