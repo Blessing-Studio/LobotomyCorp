@@ -52,10 +52,10 @@ public class BlockGeneralOrb extends BlockBase implements ITileEntityProvider {
 		try {
 			return tileEntity.newInstance();
 		} catch (InstantiationException e) {
-			e.printStackTrace();
+			//e.printStackTrace();
 			return  null;
 		} catch (IllegalAccessException e) {
-			e.printStackTrace();
+			//e.printStackTrace();
 			return  null;
 		}
 	}

@@ -26,12 +26,6 @@ public class MentalityOverlayHandler {
 
     @SubscribeEvent
     public void render(RenderGameOverlayEvent.Pre event){
-        EntityPlayerSP player = Minecraft.getMinecraft().player;
-        double conV = 0.0D;
-        if(player.hasCapability(CapabilityHandler.capConsciousness, null)) {
-            IMentality consciousness = (IMentality) player.getCapability(CapabilityHandler.capConsciousness, null);
-            conV = consciousness.getMentalityValue();
-            LobotomyCorp.logger.info(conV);
+
         }
-    }
 }
