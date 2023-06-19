@@ -22,9 +22,9 @@ import java.util.List;
 @Mod.EventBusSubscriber
 public class SPChangeEvent{
     static List<Entity> foreached = new ArrayList<Entity>();
+
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-
             if (event.phase == TickEvent.Phase.START) {
                 for (Entity e:event.player.world.loadedEntityList
                      ) {
@@ -74,8 +74,8 @@ public class SPChangeEvent{
                             foreached.add(e);
                         }
                         catch (Exception ex){
-                            String msg = ex.getMessage()+" " +ex.getStackTrace();
-                            event.player.sendMessage(new TextComponentString(msg));
+                            //String msg = ex.getMessage()+" " +ex.getStackTrace();
+                            //event.player.sendMessage(new TextComponentString(msg));
                         }
                     }
                 }
