@@ -9,7 +9,6 @@ import com.xilu.lobotomycorp.item.weapon.ItemWingbeat;
 import net.minecraft.item.Item;
 
 public class ModItems {
-
 	public static final List<Item> ITEMS = new ArrayList<Item>();
 
 	//Basic
@@ -17,6 +16,10 @@ public class ModItems {
 	public static final Item LC_COGITO = new ItemBase("lc_item_cogito").setCreativeTab(ModCreativeTab.LC_ITEM);
 	public static final Item LC_EGO_PENITENCE = new ItemPenitence("lc_item_penitence", Item.ToolMaterial.DIAMOND).setCreativeTab(ModCreativeTab.LC_EGO_WEAPON);
 	public static final Item LC_EGO_WINGBEAT = new ItemWingbeat("lc_item_wingbeat", Item.ToolMaterial.DIAMOND).setCreativeTab(ModCreativeTab.LC_EGO_WEAPON);
+	public static final Item LC_EGO_SOMEWHERESPEAR = new ItemWingbeat("lc_item_somewherespear", Item.ToolMaterial.DIAMOND).setCreativeTab(ModCreativeTab.LC_EGO_WEAPON);
+	public static final Item LC_EGO_CHERRYBLOSSON = new ItemWingbeat("lc_item_cherryblossom", Item.ToolMaterial.DIAMOND).setCreativeTab(ModCreativeTab.LC_EGO_WEAPON);
+	public static final Item LC_EGO_REGRET = new ItemWingbeat("lc_item_regret", Item.ToolMaterial.DIAMOND).setCreativeTab(ModCreativeTab.LC_EGO_WEAPON);
+	public static final Item LC_EGO_LIFEFORTHEDARE = new ItemWingbeat("lc_item_lifeforthedaredevil", Item.ToolMaterial.DIAMOND).setCreativeTab(ModCreativeTab.LC_EGO_WEAPON);
 
 	/*
 	WOOD(0, 59, 2.0F, 0.0F, 15),
