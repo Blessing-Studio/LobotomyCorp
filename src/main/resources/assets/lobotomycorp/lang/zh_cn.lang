@@ -22,6 +22,8 @@ item.lc_item_penitence.name=忏悔
 item.lc_item_wingbeat.name=翅振
 item.lc_item_somewherespear.name=彼方的裂片
 item.lc_item_cherryblossom.name=落樱
+item.lc_item_regret.name=悔恨
+item.lc_item_lifeforthedaredevil.name=决死之心
 
 # E.G.O 武器描述
 item.lc_item_penitence.desc=唯有理解才能获取知识\n这把武器虽不像其它装备那般强大，但它能为持有者提供心灵上的慰藉\n持有者的正义等级高于2级时，每次攻击都有百分之五的概率恢复2点精神值

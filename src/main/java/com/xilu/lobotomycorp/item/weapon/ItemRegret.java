@@ -3,7 +3,6 @@ package com.xilu.lobotomycorp.item.weapon;
 import com.xilu.lobotomycorp.LobotomyCorp;
 import com.xilu.lobotomycorp.item.ItemSwordBase;
 import com.xilu.lobotomycorp.util.CommonFunctions;
-import net.minecraft.advancements.Advancement;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.monster.EntityMob;
 import net.minecraft.item.ItemStack;
@@ -11,8 +10,8 @@ import net.minecraft.world.World;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
-public class ItemWingbeat extends ItemSwordBase {
-    public ItemWingbeat(String name, ToolMaterial material) {
+public class ItemRegret extends ItemSwordBase {
+    public ItemRegret(String name, ToolMaterial material) {
         super(name, material);
         CommonFunctions.addToEventBus(this);
         this.setMaxDamage(Integer.MAX_VALUE); // 设置最大耐久为一个非常大的数值

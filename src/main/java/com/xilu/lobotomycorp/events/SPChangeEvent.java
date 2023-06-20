@@ -31,8 +31,7 @@ public class SPChangeEvent{
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
 
         if (event.phase == TickEvent.Phase.START) {
-            for (Entity e:event.player.world.loadedEntityList
-            ) {
+            for (Entity e:event.player.world.loadedEntityList) {
                 if(e instanceof EntityPig && !foreached.contains(e)){
                     try {
 
