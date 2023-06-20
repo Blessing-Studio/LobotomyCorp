@@ -4,5 +4,5 @@ import net.minecraft.item.Item;
 import net.minecraftforge.common.util.EnumHelper;
 
 public class ModToolMaterial {
-    public static final Item.ToolMaterial EGO_REGRET = EnumHelper.addToolMaterial("EGO_REGRET", 2, Integer.MAX_VALUE, 2.0F, 18F, 30);
+    public static final Item.ToolMaterial EGO_REGRET = EnumHelper.addToolMaterial("EGO_REGRET", 2, Integer.MAX_VALUE, 8.0F, 14.0F, 60);
 }
