@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.xilu.lobotomycorp.init.ModCreativeTab;
+import com.xilu.lobotomycorp.init.ModToolMaterial;
 import com.xilu.lobotomycorp.item.weapon.ItemLifeForTheDaredvil;
 import com.xilu.lobotomycorp.item.weapon.ItemPenitence;
 import com.xilu.lobotomycorp.item.weapon.ItemRegret;
@@ -20,7 +21,7 @@ public class ModItems {
 	public static final Item LC_EGO_WINGBEAT = new ItemWingbeat("lc_item_wingbeat", Item.ToolMaterial.DIAMOND).setCreativeTab(ModCreativeTab.LC_EGO_WEAPON);
 	public static final Item LC_EGO_SOMEWHERESPEAR = new ItemWingbeat("lc_item_somewherespear", Item.ToolMaterial.DIAMOND).setCreativeTab(ModCreativeTab.LC_EGO_WEAPON);
 	public static final Item LC_EGO_CHERRYBLOSSON = new ItemWingbeat("lc_item_cherryblossom", Item.ToolMaterial.DIAMOND).setCreativeTab(ModCreativeTab.LC_EGO_WEAPON);
-	public static final Item LC_EGO_REGRET = new ItemRegret("lc_item_regret", Item.ToolMaterial.DIAMOND).setCreativeTab(ModCreativeTab.LC_EGO_WEAPON);
+	public static final Item LC_EGO_REGRET = new ItemRegret("lc_item_regret", ModToolMaterial.EGO_REGRET).setCreativeTab(ModCreativeTab.LC_EGO_WEAPON);
 	public static final Item LC_EGO_LIFEFORTHEDARE = new ItemLifeForTheDaredvil("lc_item_lifeforthedaredevil", Item.ToolMaterial.DIAMOND).setCreativeTab(ModCreativeTab.LC_EGO_WEAPON);
 //ItemSomeWhereSpear ItemCherryBlossom ItemRegret
 	/*

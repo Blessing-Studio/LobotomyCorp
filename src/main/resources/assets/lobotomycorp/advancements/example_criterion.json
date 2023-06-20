@@ -1,0 +1,21 @@
+{
+  "display": {
+      "icon": { "item": "lobotomycorp:lc_item_cogito" },
+      "title": "主管好！",
+      "frame": "goal",
+      "description": "欢迎来到脑叶公司 MC-01 支部！",
+      "show_toast": true,
+      "announce_to_chat": true,
+      "hidden": false
+  },
+  "criteria": {
+    "example_criterion": {
+      "trigger": "minecraft:enter_block",
+      "conditions": {
+        "player": {
+          "type": "minecraft:player"
+        }
+      }
+    }
+  }
+}
