@@ -17,15 +17,15 @@ enchantment.lobotomycorp.spirit_damage=灵魂伤害
 
 item.lc_item_cogito.name=Cogito 药剂
 
-# E.G.O
+# E.G.O 武器
 item.lc_item_penitence.name=忏悔
-item.lc_item_penitence.desc=唯有理解才能获取知识\n这把武器虽不像其它装备那般强大，但它能为持有者提供心灵上的慰藉\n持有者的正义等级高于2级时，每次攻击都有5%的概率恢复2点精神值
-
 item.lc_item_wingbeat.name=翅振
+item.lc_item_somewherespear.name=彼方的裂片
+item.lc_item_cherryblossom.name=落樱
 
+# E.G.O 武器描述
+item.lc_item_penitence.desc=唯有理解才能获取知识\n这把武器虽不像其它装备那般强大，但它能为持有者提供心灵上的慰藉\n持有者的正义等级高于2级时，每次攻击都有百分之五的概率恢复2点精神值
 
-idealland.moroon_incoming_herald=[IDL][注意] 摩隆密切关注着你的战斗。
-idealland.msg.notice_meter_report=[IDL]摩隆注意度： %d, 入侵准备: %d/%d, 测量误差:%d
 
 # Potions
 idealland.potion.deadly=致死

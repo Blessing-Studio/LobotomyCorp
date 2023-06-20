@@ -11,7 +11,8 @@ import net.minecraft.item.EnumAction;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 
-public class ItemPistolBase extends ItemAdaptingBase {
+public class
+ItemPistolBase extends ItemAdaptingBase {
     public ItemPistolBase(String name) {
         super(name);
         setRangedWeapon();
