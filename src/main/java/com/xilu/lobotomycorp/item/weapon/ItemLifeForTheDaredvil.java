@@ -1,8 +1,12 @@
 package com.xilu.lobotomycorp.item.weapon;
 
+import com.google.common.collect.Multimap;
 import com.xilu.lobotomycorp.item.ItemSwordBase;
 import com.xilu.lobotomycorp.util.CommonFunctions;
 import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.entity.SharedMonsterAttributes;
+import net.minecraft.entity.ai.attributes.AttributeModifier;
+import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
@@ -34,10 +38,5 @@ public class ItemLifeForTheDaredvil extends ItemSwordBase {
     @Override
     public boolean showDurabilityBar(ItemStack stack) {
         return false; // 不显示耐久条
-    }
-
-    @Override
-    public int getMaxItemUseDuration(ItemStack stack) {
-        return 10;  // 自定义的使用持续时间，较小的数值表示更快的攻击速度
     }
 }
