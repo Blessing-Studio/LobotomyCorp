@@ -56,15 +56,15 @@ public class ItemRegret extends ItemPickaxeBase {
         return false; // 不显示耐久条
     }
 
-    @Override
-    public Multimap<String, AttributeModifier> getAttributeModifiers(EntityEquipmentSlot slot, ItemStack stack){
-        Multimap<String, AttributeModifier> multimap = super.getAttributeModifiers(slot, stack);
-
-        if (slot == EntityEquipmentSlot.MAINHAND) {
-            multimap.put(SharedMonsterAttributes.ATTACK_SPEED.getName(),
-                    new AttributeModifier(IRUUID,"regret",1,0));
-        }
-
-        return multimap;
-    }
+//    @Override
+//    public Multimap<String, AttributeModifier> getAttributeModifiers(EntityEquipmentSlot slot, ItemStack stack){
+//        Multimap<String, AttributeModifier> multimap = super.getAttributeModifiers(slot, stack);
+//
+//        if (slot == EntityEquipmentSlot.MAINHAND) {
+//            multimap.put(SharedMonsterAttributes.ATTACK_SPEED.getName(),
+//                    new AttributeModifier(IRUUID,"regret",1,0));
+//        }
+//
+//        return multimap;
+//    }
 }
