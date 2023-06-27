@@ -12,7 +12,7 @@ public class ModInits {
     public static void init(){
         CapabilityHandler.setupCapabilities();
         MinecraftForge.EVENT_BUS.register(new MentalityHandler());
-        MinecraftForge.EVENT_BUS.register(new MentalityOverlayHandler());
+        //inecraftForge.EVENT_BUS.register(new MentalityOverlayHandler());
         MinecraftForge.EVENT_BUS.register(new PlayerEventHandler());
     }
 }
