@@ -8,7 +8,7 @@ import net.minecraftforge.common.capabilities.CapabilityManager;
 
 public class CapabilityHandler {
     @CapabilityInject(IMentality.class)
-    public static Capability<IMentality> capConsciousness;
+    public static Capability<IMentality> capMentality;
 
     public static void setupCapabilities(){
         CapabilityManager.INSTANCE.register(IMentality.class, new MentalityCapability.Storage(), MentalityCapability.Implementation.class);

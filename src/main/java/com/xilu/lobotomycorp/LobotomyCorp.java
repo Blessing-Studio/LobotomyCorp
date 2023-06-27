@@ -49,6 +49,7 @@ public class LobotomyCorp {
     public void preInit(FMLPreInitializationEvent event) {
         logger = event.getModLog();
 
+        CapabilityHandler.setupCapabilities();
         RegistryHandler.preInitRegistries(event);
     }
 

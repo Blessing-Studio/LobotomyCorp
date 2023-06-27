@@ -1,5 +1,6 @@
 package com.xilu.lobotomycorp.handler;
 
+import com.xilu.lobotomycorp.interfaces.IMentality;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.gui.ScaledResolution;
@@ -7,6 +8,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.GuiIngameForge;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
+import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 
@@ -43,13 +45,16 @@ public class MentalityOverlayHandler extends Gui {
             EntityPlayer player = Minecraft.getMinecraft().player;
             random.setSeed((long)(updateCounter * 312871));
 
-            mentalityLevel = (int)player.getHealth();
-            maxMentalityLevel = player.getMaxHealth();
+//            mentalityLevel = (int)player.getHealth();
+//            maxMentalityLevel = player.getMaxHealth();
+            IMentality mentality = player.getCapability(CapabilityHandler.capMentality, null);
 
             if (mc.playerController.gameIsSurvivalOrAdventure())
             {
                 mc.getTextureManager().bindTexture(HUD);
-                drawMentality(width, height, mentalityLevel, maxMentalityLevel);
+                drawMentality(width, height, (int) mentality.getMentalityValue(), maxMentalityLevel);
+
+
                 GuiIngameForge.right_height += 10;
                 mc.getTextureManager().bindTexture(Gui.ICONS);
             }

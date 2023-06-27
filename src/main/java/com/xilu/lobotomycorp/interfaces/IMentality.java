@@ -1,7 +1,7 @@
 package com.xilu.lobotomycorp.interfaces;
 
 public interface IMentality {
-    public double getMentalityValue();
+    public float getMentalityValue();
 
-    public void setMentalityValue(double conV);
+    public void setMentalityValue(float conV);
 }

@@ -21,7 +21,8 @@ public class MentalityCapability {
             //创建一个新的NBT标签
             NBTTagCompound compound = new NBTTagCompound();
             //将清醒度值存入NBT的“consciousness”标签中
-            compound.setDouble("consciousness", instance.getMentalityValue());
+            float mentalityValue= instance.getMentalityValue();
+            compound.setFloat("mentality", 2);
             //将该NBT标签返回上级代码
             return compound;
         }
@@ -31,11 +32,11 @@ public class MentalityCapability {
             //将传入的NBTBase强制转换为NBTTagCompound类型方便处理
             NBTTagCompound compound =(NBTTagCompound) nbt;
             //设置存储读取数据变量的初值防止报错
-            double conV = 20D;
+            float conV = 0F;
             //判断是否有所需要的标签
-            if(compound.hasKey("consciousness")) {
+            if(compound.hasKey("mentality")) {
                 //读取标签
-                conV = compound.getDouble("consciousness");
+                conV = compound.getFloat("mentality");
             }
             //调用数据接口类中的方法将读取的数据设置进自定义的数据结构中
             instance.setMentalityValue(conV);
@@ -43,29 +44,29 @@ public class MentalityCapability {
     }
 
     public static class Implementation implements IMentality{
-        private double conV = 20D;//默认初始理智值，也是最大理智值
+        private float conV = 20F;//默认初始理智值，也是最大理智值
 
         @Override
-        public double getMentalityValue() {
+        public float getMentalityValue() {
             return this.conV;
         }
 
         @Override
-        public void setMentalityValue(double conV) {
+        public void setMentalityValue(float conV) {
             this.conV = conV;
         }
     }
 
     public static class ProvidePlayer implements ICapabilitySerializable<NBTTagCompound>, ICapabilityProvider {
         //创建一个已经默认实现了的consciousness实例
-        private IMentality consciousness = new Implementation();
+        private IMentality Mentality = new Implementation();
         //获取该Capability的Storage结构
-        private Capability.IStorage<IMentality> storage = CapabilityHandler.capConsciousness.getStorage();
+        private Capability.IStorage<IMentality> storage = CapabilityHandler.capMentality.getStorage();
 
         //判断目前Forge在该游戏对象上检测到的Capability是否为该Capability
         @Override
         public boolean hasCapability(@Nonnull Capability<?> capability, @Nullable EnumFacing facing) {
-            return CapabilityHandler.capConsciousness.equals(capability);
+            return CapabilityHandler.capMentality.equals(capability);
         }
 
         //获取该游戏对象的Capability
@@ -73,10 +74,10 @@ public class MentalityCapability {
         @Override
         public <T> T getCapability(@Nonnull Capability<T> capability, @Nullable EnumFacing facing) {
             //判断获取到的Capability是否为该Capability
-            if(CapabilityHandler.capConsciousness.equals(capability)){
+            if(CapabilityHandler.capMentality.equals(capability)){
                 @SuppressWarnings("unchecked")
                 //将consciousness变量强制转为一个通用泛型并返回（玄学代码，如果理解不了可以暂时留着，但要求会用）
-                T result = (T) consciousness;
+                T result = (T) Mentality;
                 return result;
             }
             return null;
@@ -88,7 +89,7 @@ public class MentalityCapability {
             //新建一个NBTTagCompound标签
             NBTTagCompound compound = new NBTTagCompound();
             //从该Capability的Storage中取出consciousness数据结构并将其写入compound的“consciousness”标签中
-            compound.setTag("consciousness", storage.writeNBT(CapabilityHandler.capConsciousness, consciousness, null));
+            compound.setTag("mentality", storage.writeNBT(CapabilityHandler.capMentality, Mentality, null));
             //将处理好的NBT标签传回上层函数做进一步处理
             return compound;
         }
@@ -97,9 +98,9 @@ public class MentalityCapability {
         @Override
         public void deserializeNBT(NBTTagCompound nbt) {
             //取出NBT中标签为"consciousness"的对应数据
-            NBTTagCompound compound = nbt.getCompoundTag("consciousness");
+            NBTTagCompound compound = nbt.getCompoundTag("mentality");
             //从compound中读取出Capability数据并将其放入consciousness变量中
-            storage.readNBT(CapabilityHandler.capConsciousness, consciousness, null, compound);
+            storage.readNBT(CapabilityHandler.capMentality, Mentality, null, compound);
         }
     }
 }
