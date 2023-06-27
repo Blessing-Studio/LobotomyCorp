@@ -1,6 +1,5 @@
 package com.xilu.lobotomycorp.events;
 
-import com.xilu.lobotomycorp.gui.Mentality.MentalityHUD;
 import com.xilu.lobotomycorp.util.SpaceUtil;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;

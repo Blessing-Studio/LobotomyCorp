@@ -7,12 +7,12 @@ import com.xilu.lobotomycorp.handler.PlayerEventHandler;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
+import net.minecraftforge.fml.common.FMLCommonHandler;
 
 public class ModInits {
     public static void init(){
-        CapabilityHandler.setupCapabilities();
         MinecraftForge.EVENT_BUS.register(new MentalityHandler());
-        //inecraftForge.EVENT_BUS.register(new MentalityOverlayHandler());
         MinecraftForge.EVENT_BUS.register(new PlayerEventHandler());
+        FMLCommonHandler.instance().bus().register(new MentalityOverlayHandler());
     }
 }

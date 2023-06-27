@@ -1,6 +1,5 @@
 package com.xilu.lobotomycorp;
 
-import com.xilu.lobotomycorp.gui.Mentality.MentalityHUD;
 import com.xilu.lobotomycorp.gui.ModGuiElementLoader;
 import com.xilu.lobotomycorp.handler.CapabilityHandler;
 import com.xilu.lobotomycorp.handler.MentalityOverlayHandler;
@@ -50,7 +49,6 @@ public class LobotomyCorp {
     public void preInit(FMLPreInitializationEvent event) {
         logger = event.getModLog();
 
-        ModInits.init();
         RegistryHandler.preInitRegistries(event);
     }
 
@@ -64,8 +62,8 @@ public class LobotomyCorp {
         {
             KeyboardManager.init();
         }
+        ModInits.init();
         NetworkHandler.init();
-        MentalityHUD.Init();
 
 		Log("%s has finished its initializations", MODID);
 	}
