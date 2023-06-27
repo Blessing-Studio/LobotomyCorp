@@ -11,6 +11,6 @@ public class CapabilityHandler {
     public static Capability<IMentality> capMentality;
 
     public static void setupCapabilities(){
-        CapabilityManager.INSTANCE.register(IMentality.class, new MentalityCapability.Storage(), MentalityCapability.Implementation.class);
+        CapabilityManager.INSTANCE.register(IMentality.class, new MentalityCapability.Storage(), MentalityCapability.MentalityImplementation.class);
     }
 }

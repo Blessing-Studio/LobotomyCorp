@@ -1,5 +1,7 @@
 package com.xilu.lobotomycorp.events;
 
+import com.xilu.lobotomycorp.handler.CapabilityHandler;
+import com.xilu.lobotomycorp.interfaces.IMentality;
 import com.xilu.lobotomycorp.util.SpaceUtil;
 import net.minecraft.block.Block;
 import net.minecraft.client.Minecraft;
@@ -25,7 +27,6 @@ import java.util.List;
 @Mod.EventBusSubscriber
 public class SPChangeEvent{
     static List<Entity> foreached = new ArrayList<Entity>();
-    public static int foo = 0;
     @SubscribeEvent
     public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
 
@@ -40,7 +41,7 @@ public class SPChangeEvent{
                         Vec3d entityToPlayer = event.player.getPositionVector().subtract(entityPosition);
                         double angle = playerLookDirection.dotProduct(entityToPlayer.normalize());
                         float fovs = Minecraft.getMinecraft().gameSettings.fovSetting;
-                        double cosine = Math.cos(Math.toRadians(fovs*0.85f*Minecraft.getMinecraft().player.getFovModifier()));
+                        double cosine = Math.cos(Math.toRadians(100));
 
                         boolean inSight = angle <= cosine;
                         if (angle * cosine<0){
@@ -60,6 +61,9 @@ public class SPChangeEvent{
                                 tellif = true;
                             }
                             if(tellif){
+                                tellif=event.player.world.getLight(event.player.getPosition())>=8;
+                            }
+                            if(tellif){
                                 try{
                                     Vec3d direction = new Vec3d(((int)e.posX - playerPos.getX()),
                                             ((int)e.posY - playerPos.getY()), ((int)e.posZ - playerPos.getZ())).normalize();
@@ -69,14 +73,15 @@ public class SPChangeEvent{
                                     if(result!=null&& result.typeOfHit == RayTraceResult.Type.BLOCK){
                                         Block b = event.player.world.getBlockState(result.getBlockPos()).getBlock();
                                         if(b== Blocks.AIR){
-                                            event.player.sendMessage(new TextComponentString("能看见"));
-                                            foo++;
+                                            IMentality mentality = event.player.getCapability(CapabilityHandler.capMentality, null);
+                                            float lastvalue= mentality.getMentalityValue();
+                                            mentality.setMentalityValue(lastvalue-0.5f);
                                         }
                                     }
                                     else{
-                                        event.player.sendMessage(new TextComponentString("能看见"));
-                                        event.player.sendMessage(new TextComponentString(e.getPosition().toString()));
-                                        foo++;
+                                        IMentality mentality = event.player.getCapability(CapabilityHandler.capMentality, null);
+                                        float lastvalue= mentality.getMentalityValue();
+                                        mentality.setMentalityValue(lastvalue-0.5f);
                                     }
                                 }
                                 catch (Exception ex){

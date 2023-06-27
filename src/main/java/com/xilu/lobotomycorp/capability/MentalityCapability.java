@@ -2,12 +2,16 @@ package com.xilu.lobotomycorp.capability;
 
 import com.xilu.lobotomycorp.handler.CapabilityHandler;
 import com.xilu.lobotomycorp.interfaces.IMentality;
+import net.minecraft.client.Minecraft;
 import net.minecraft.nbt.NBTBase;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.EnumFacing;
+import net.minecraft.world.World;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ICapabilityProvider;
 import net.minecraftforge.common.capabilities.ICapabilitySerializable;
+import net.minecraftforge.event.world.WorldEvent;
+import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
@@ -20,7 +24,7 @@ public class MentalityCapability {
         public NBTBase writeNBT(Capability<IMentality> capability, IMentality instance, EnumFacing side) {
             //创建一个新的NBT标签
             NBTTagCompound compound = new NBTTagCompound();
-            //将清醒度值存入NBT的“consciousness”标签中
+            //将精神值存入NBT的“mentality”标签中
             float mentalityValue= instance.getMentalityValue();
             compound.setFloat("mentality", 2);
             //将该NBT标签返回上级代码
@@ -43,8 +47,8 @@ public class MentalityCapability {
         }
     }
 
-    public static class Implementation implements IMentality{
-        private float conV = 20F;//默认初始理智值，也是最大理智值
+    public static class MentalityImplementation implements IMentality{
+        private static float conV = 20F;//默认初始理智值，也是最大理智值
 
         @Override
         public float getMentalityValue() {
@@ -59,7 +63,7 @@ public class MentalityCapability {
 
     public static class ProvidePlayer implements ICapabilitySerializable<NBTTagCompound>, ICapabilityProvider {
         //创建一个已经默认实现了的consciousness实例
-        private IMentality Mentality = new Implementation();
+        private IMentality Mentality = new MentalityImplementation();
         //获取该Capability的Storage结构
         private Capability.IStorage<IMentality> storage = CapabilityHandler.capMentality.getStorage();
 

@@ -8,7 +8,6 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.GuiIngameForge;
 import net.minecraftforge.client.event.RenderGameOverlayEvent;
-import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 import net.minecraftforge.fml.common.gameevent.TickEvent;
 
@@ -25,7 +24,7 @@ public class MentalityOverlayHandler extends Gui {
 
     public static float maxMentalityLevel = 10f;
 
-    public static final ResourceLocation HUD = new ResourceLocation(MODID,"textures/gui/overlay.png");
+    public static final ResourceLocation OVERLAY = new ResourceLocation(MODID,"textures/gui/overlay.png");
 
     @SubscribeEvent
     public void onClientTick(TickEvent.ClientTickEvent event) {
@@ -51,8 +50,9 @@ public class MentalityOverlayHandler extends Gui {
 
             if (mc.playerController.gameIsSurvivalOrAdventure())
             {
-                mc.getTextureManager().bindTexture(HUD);
-                drawMentality(width, height, (int) mentality.getMentalityValue(), maxMentalityLevel);
+                int value = (int) mentality.getMentalityValue();
+                mc.getTextureManager().bindTexture(OVERLAY);
+                drawMentality(width, height, value, maxMentalityLevel);
 
 
                 GuiIngameForge.right_height += 10;
