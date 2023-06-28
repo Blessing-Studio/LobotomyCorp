@@ -6,17 +6,20 @@ import com.xilu.lobotomycorp.LobotomyCorp;
 import com.xilu.lobotomycorp.item.ItemHoeBase;
 import com.xilu.lobotomycorp.item.ItemPickaxeBase;
 import com.xilu.lobotomycorp.item.ItemSwordBase;
+import com.xilu.lobotomycorp.item.ModItems;
 import com.xilu.lobotomycorp.util.CommonFunctions;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.monster.EntityMob;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.Collection;
 import java.util.Map;
@@ -67,4 +70,20 @@ public class ItemRegret extends ItemPickaxeBase {
 //
 //        return multimap;
 //    }
+
+    @Override
+    @Nonnull
+    public Multimap<String, AttributeModifier> getItemAttributeModifiers(EntityEquipmentSlot equipmentSlot) {
+        Multimap<String, AttributeModifier> multimap = super.getItemAttributeModifiers(equipmentSlot);
+
+        if (equipmentSlot == EntityEquipmentSlot.MAINHAND) {
+            AttributeModifier speedModifier = new AttributeModifier(ATTACK_SPEED_MODIFIER, "Weapon modifier", -3.2, 0);
+
+            // remove the entries added by superclass (to allow 'overwriting')
+            multimap.remove(SharedMonsterAttributes.ATTACK_SPEED.getName(), speedModifier);
+            multimap.put(SharedMonsterAttributes.ATTACK_SPEED.getName(), speedModifier);
+        }
+
+        return multimap;
+    }
 }

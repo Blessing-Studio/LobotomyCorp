@@ -26,12 +26,12 @@ item.lc_item_regret.name=悔恨
 item.lc_item_lifeforthedaredevil.name=决死之心
 
 # E.G.O 武器描述
-item.lc_item_penitence.desc=§2§lZAYIN\n§r§7唯有理解才能获取知识\n这把武器虽不像其它装备那般强大，但它能为持有者提供心灵上的慰藉\n持有者的正义等级高于2级时，每次攻击都有百分之五的概率恢复2点精神值
-item.lc_item_wingbeat.desc=§2§lZAYIN\n§r§7唯有理解才能获取知识\n这把武器虽不像其它装备那般强大，但它能为持有者提供心灵上的慰藉\n持有者的正义等级高于2级时，每次攻击都有百分之五的概率恢复2点精神值
-item.lc_item_somewherespear.desc=§3§lTETH\n§r§7唯有理解才能获取知识\n这把武器虽不像其它装备那般强大，但它能为持有者提供心灵上的慰藉\n持有者的正义等级高于2级时，每次攻击都有百分之五的概率恢复2点精神值
-item.lc_item_cherryblossom.desc=§3§lTETH\n§r§7唯有理解才能获取知识\n这把武器虽不像其它装备那般强大，但它能为持有者提供心灵上的慰藉\n持有者的正义等级高于2级时，每次攻击都有百分之五的概率恢复2点精神值
-item.lc_item_regret.desc=§3§lTETH\n§r§7唯有理解才能获取知识\n这把武器虽不像其它装备那般强大，但它能为持有者提供心灵上的慰藉\n持有者的正义等级高于2级时，每次攻击都有百分之五的概率恢复2点精神值
-item.lc_item_lifeforthedaredevil.desc=§3§lTETH\n§r§7唯有理解才能获取知识\n这把武器虽不像其它装备那般强大，但它能为持有者提供心灵上的慰藉\n持有者的正义等级高于2级时，每次攻击都有百分之五的概率恢复2点精神值
+item.lc_item_penitence.desc=§2§lZAYIN\n§r§7唯有理解才能获取知识\n这把武器虽不像其它装备那般强大，但它能为持有者提供心灵上的慰藉\n每次攻击都有百分之五的概率恢复2点精神值
+item.lc_item_wingbeat.desc=§2§lZAYIN\n§r§7这把武器闪耀着和精灵们身上相同的，苍白的光。\n这把武器并不香精灵的羽翼那样轻薄，而要沉重许多。
+item.lc_item_somewherespear.desc=§3§lTETH\n§r§7必要想着去理解它，只是这样握着它就行了。\n进入战斗后有百分之十的概率提高百分之四十的最大精神值，该效果持续30秒
+item.lc_item_cherryblossom.desc=§3§lTETH\n§r§7花瓣散落开来，在空中飘过，如同展开的粉扇。\n映照出的余辉，令人眷恋着花落前的景色。
+item.lc_item_regret.desc=§3§lTETH\n§r§7对一个连葬礼都没有的人而言，唯有深深的悔恨才是最后的悼唁。
+item.lc_item_lifeforthedaredevil.desc=§3§lTETH\n§r§7这是一把古老的武士刀。\n如果这把刀落在了懦夫手里，它便一点威力也没有。
 
 
 # Potions

@@ -23,6 +23,7 @@ public class ModItems {
 	public static final Item LC_EGO_CHERRYBLOSSON = new ItemWingbeat("lc_item_cherryblossom", Item.ToolMaterial.DIAMOND).setCreativeTab(ModCreativeTab.LC_EGO_WEAPON);
 	public static final Item LC_EGO_REGRET = new ItemRegret("lc_item_regret", ModToolMaterial.EGO_REGRET).setCreativeTab(ModCreativeTab.LC_EGO_WEAPON);
 	public static final Item LC_EGO_LIFEFORTHEDARE = new ItemLifeForTheDaredvil("lc_item_lifeforthedaredevil", Item.ToolMaterial.DIAMOND).setCreativeTab(ModCreativeTab.LC_EGO_WEAPON);
+
 //ItemSomeWhereSpear ItemCherryBlossom ItemRegret
 	/*
 	WOOD(0, 59, 2.0F, 0.0F, 15),
