@@ -77,6 +77,7 @@ public class MentalityOverlayHandler extends Gui {
             }
 
             drawTexturedModalRect(startX, startY, backgroundOffset, 16, 9, 9);
+
             if (mentalityLevel > dropletHalf) {
                 drawTexturedModalRect(startX, startY, (iconIndex + 4) * 9, 16, 9, 9);
             }

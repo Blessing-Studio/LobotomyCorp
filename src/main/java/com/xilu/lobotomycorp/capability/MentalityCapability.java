@@ -26,7 +26,12 @@ public class MentalityCapability {
             NBTTagCompound compound = new NBTTagCompound();
             //将精神值存入NBT的“mentality”标签中
             float mentalityValue= instance.getMentalityValue();
-            compound.setFloat("mentality", 2);
+            if (mentalityValue >= 0) {
+                compound.setFloat("mentality", mentalityValue);
+            } else {
+                compound.setFloat("mentality", 0);
+            }
+
             //将该NBT标签返回上级代码
             return compound;
         }
@@ -36,7 +41,7 @@ public class MentalityCapability {
             //将传入的NBTBase强制转换为NBTTagCompound类型方便处理
             NBTTagCompound compound =(NBTTagCompound) nbt;
             //设置存储读取数据变量的初值防止报错
-            float conV = 0F;
+            float conV = 20F;
             //判断是否有所需要的标签
             if(compound.hasKey("mentality")) {
                 //读取标签

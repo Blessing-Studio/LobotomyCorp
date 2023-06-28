@@ -8,6 +8,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTBase;
 import net.minecraft.nbt.NBTTagCompound;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.text.TextComponentString;
 import net.minecraftforge.common.capabilities.Capability;
 import net.minecraftforge.common.capabilities.ICapabilitySerializable;
 import net.minecraftforge.event.AttachCapabilitiesEvent;
@@ -42,19 +43,19 @@ public class PlayerEventHandler {
     }
 
     @SubscribeEvent
-    public void onPlayerClone(PlayerEvent.Clone event){
-        //创建一个新的玩家清醒度Capability变量
-        Capability<IMentality> capabilityMentality = CapabilityHandler.capMentality;
-        //获取新创建的Capability变量中的Storage空间
-        Capability.IStorage<IMentality> storageConsciousness = capabilityMentality.getStorage();
+    public void onPlayerRespawn(net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerRespawnEvent event) {
+        EntityPlayer player = event.player;
+        IMentality capability = player.getCapability(CapabilityHandler.capMentality, null);
 
-        //如果原玩家实体带有对应的Capability
-        if(event.getOriginal().hasCapability(capabilityMentality, null) && event.getEntityPlayer().hasCapability(capabilityMentality, null)){
-            //将原玩家实体对应Capability中的NBT数据取出
-            NBTBase nbt = storageConsciousness.writeNBT(capabilityMentality, event.getOriginal().getCapability(capabilityMentality, null), null);
-            //将NBT数据放入克隆出的新玩家实体的Capability中
-            storageConsciousness.readNBT(capabilityMentality, event.getEntityPlayer().getCapability(capabilityMentality, null), null, nbt);
+        if (capability != null) {
+            // 将水分值重置为初始值
+            capability.setMentalityValue(20F);
         }
+    }
+
+    @SubscribeEvent
+    public void onPlayerLoggedIn(net.minecraftforge.fml.common.gameevent.PlayerEvent.PlayerLoggedInEvent event) {
+        event.player.sendMessage(new TextComponentString("感谢主管游玩 脑叶公司 " + VERSION + "此版本为早期开发版，不代表最终质量！"));
     }
 }
 

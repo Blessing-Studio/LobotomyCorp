@@ -1,5 +1,7 @@
 package com.xilu.lobotomycorp.item.weapon;
 
+import com.xilu.lobotomycorp.handler.CapabilityHandler;
+import com.xilu.lobotomycorp.interfaces.IMentality;
 import com.xilu.lobotomycorp.item.ItemSwordBase;
 import com.xilu.lobotomycorp.util.CommonFunctions;
 import net.minecraft.entity.EntityLivingBase;
@@ -27,8 +29,15 @@ public class ItemPenitence extends ItemSwordBase {
             EntityLivingBase attacker = (EntityLivingBase) event.getSource().getTrueSource();
 
             if (attacker != null && attacker.getHeldItemMainhand().getItem() == this) {
-                if(attacker.getRNG().nextFloat() < 0.1f){
-                    attacker.heal(2);//精神值系统做完后会改成加两点精神值
+                if(attacker instanceof EntityPlayer && attacker.getRNG().nextFloat() < 0.1f) {
+                    IMentality mentality = attacker.getCapability(CapabilityHandler.capMentality, null);
+                    mentality.setMentalityValue(mentality.getMentalityValue() + 2 >= 20 ? 20 : mentality.getMentalityValue() + 2);
+                }
+
+                if (hurter instanceof EntityPlayer) {
+                    event.setCanceled(true);
+                    IMentality mentality = hurter.getCapability(CapabilityHandler.capMentality, null);
+                    mentality.setMentalityValue(event.getAmount() * 1.5f);
                 }
             }
         }

@@ -33,7 +33,7 @@ import org.apache.logging.log4j.Logger;
 public class LobotomyCorp {
     public static final String MODID = "lobotomycorp";
     public static final String NAME = "Lobotomy Corp";
-    public static final String VERSION = "0.1.101";
+    public static final String VERSION = "0.0.2";
 
     public static Logger logger;
 
