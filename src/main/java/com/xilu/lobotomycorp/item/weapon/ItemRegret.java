@@ -1,29 +1,23 @@
 package com.xilu.lobotomycorp.item.weapon;
 
 import com.google.common.collect.Multimap;
-import com.google.common.collect.Multiset;
 import com.xilu.lobotomycorp.LobotomyCorp;
-import com.xilu.lobotomycorp.item.ItemHoeBase;
 import com.xilu.lobotomycorp.item.ItemPickaxeBase;
-import com.xilu.lobotomycorp.item.ItemSwordBase;
-import com.xilu.lobotomycorp.item.ModItems;
 import com.xilu.lobotomycorp.util.CommonFunctions;
+import net.minecraft.client.Minecraft;
+import net.minecraft.client.gui.FontRenderer;
 import net.minecraft.entity.EntityLivingBase;
 import net.minecraft.entity.SharedMonsterAttributes;
 import net.minecraft.entity.ai.attributes.AttributeModifier;
 import net.minecraft.entity.monster.EntityMob;
-import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.EntityEquipmentSlot;
 import net.minecraft.item.ItemStack;
 import net.minecraft.world.World;
+import net.minecraftforge.client.event.RenderGameOverlayEvent;
 import net.minecraftforge.event.entity.living.LivingHurtEvent;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
 import javax.annotation.Nonnull;
-import javax.annotation.Nullable;
-import java.util.Collection;
-import java.util.Map;
-import java.util.Set;
 import java.util.UUID;
 
 public class ItemRegret extends ItemPickaxeBase {
@@ -58,18 +52,6 @@ public class ItemRegret extends ItemPickaxeBase {
     public boolean showDurabilityBar(ItemStack stack) {
         return false; // 不显示耐久条
     }
-
-//    @Override
-//    public Multimap<String, AttributeModifier> getAttributeModifiers(EntityEquipmentSlot slot, ItemStack stack){
-//        Multimap<String, AttributeModifier> multimap = super.getAttributeModifiers(slot, stack);
-//
-//        if (slot == EntityEquipmentSlot.MAINHAND) {
-//            multimap.put(SharedMonsterAttributes.ATTACK_SPEED.getName(),
-//                    new AttributeModifier(IRUUID,"regret",1,0));
-//        }
-//
-//        return multimap;
-//    }
 
     @Override
     @Nonnull

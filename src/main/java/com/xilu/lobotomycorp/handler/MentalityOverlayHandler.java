@@ -54,7 +54,6 @@ public class MentalityOverlayHandler extends Gui {
                 mc.getTextureManager().bindTexture(OVERLAY);
                 drawMentality(width, height, value, maxMentalityLevel);
 
-
                 GuiIngameForge.right_height += 10;
                 mc.getTextureManager().bindTexture(Gui.ICONS);
             }
@@ -67,22 +66,20 @@ public class MentalityOverlayHandler extends Gui {
 
         for (int i = 0; i < 10; i++) {
             int dropletHalf = i * 2 + 1;
-            int iconIndex = 0;
-            int backgroundOffset = 0;
             int startX = left - i * 8 - 9;
             int startY = top;
 
-            if (maxMentalityLevel <= 0.0F && updateCounter % (mentalityLevel * 3 + 1) == 0) {
+            if (updateCounter % (mentalityLevel * 3 + 1) == 0) {
                 startY = top + (random.nextInt(3) - 1);
             }
 
-            drawTexturedModalRect(startX, startY, backgroundOffset, 16, 9, 9);
+            drawTexturedModalRect(startX, startY, 22, 0, 12, 9);
 
             if (mentalityLevel > dropletHalf) {
-                drawTexturedModalRect(startX, startY, (iconIndex + 4) * 9, 16, 9, 9);
+                drawTexturedModalRect(startX, startY, 0, 0, 12, 9);
             }
             if (mentalityLevel == dropletHalf) {
-                drawTexturedModalRect(startX, startY, (iconIndex + 5) * 9, 16, 9, 9);
+                drawTexturedModalRect(startX, startY, 11, 0, 12, 9);
             }
         }
     }

@@ -1,9 +1,7 @@
 package com.xilu.lobotomycorp.init;
 
-import com.xilu.lobotomycorp.handler.CapabilityHandler;
-import com.xilu.lobotomycorp.handler.MentalityHandler;
-import com.xilu.lobotomycorp.handler.MentalityOverlayHandler;
-import com.xilu.lobotomycorp.handler.PlayerEventHandler;
+import com.xilu.lobotomycorp.handler.*;
+import net.minecraft.client.Minecraft;
 import net.minecraft.item.Item;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.util.EnumHelper;
