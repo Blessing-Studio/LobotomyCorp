@@ -16,6 +16,7 @@ enchantment.lobotomycorp.erosion_damage=侵蚀伤害
 enchantment.lobotomycorp.spirit_damage=灵魂伤害
 
 item.lc_item_cogito.name=Cogito 药剂
+item.lc_item_pebox.name=PE-BOX
 
 # E.G.O 武器
 item.lc_item_penitence.name=忏悔

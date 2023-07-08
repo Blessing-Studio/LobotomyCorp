@@ -48,8 +48,7 @@ public class MentalityOverlayHandler extends Gui {
 //            maxMentalityLevel = player.getMaxHealth();
             IMentality mentality = player.getCapability(CapabilityHandler.capMentality, null);
 
-            if (mc.playerController.gameIsSurvivalOrAdventure())
-            {
+            if (mc.playerController.gameIsSurvivalOrAdventure()) {
                 int value = (int) mentality.getMentalityValue();
                 mc.getTextureManager().bindTexture(OVERLAY);
                 drawMentality(width, height, value, maxMentalityLevel);

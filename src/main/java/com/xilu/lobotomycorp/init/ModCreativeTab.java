@@ -13,7 +13,7 @@ public class ModCreativeTab {
         @SideOnly(Side.CLIENT)
         public ItemStack getTabIconItem()
         {
-            return new ItemStack(ModItems.LC_EGO_PENITENCE);
+            return new ItemStack(ModItems.LC_PEBOX);
         }
     };
 

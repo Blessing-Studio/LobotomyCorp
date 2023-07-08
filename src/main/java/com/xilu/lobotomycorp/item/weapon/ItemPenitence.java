@@ -16,7 +16,7 @@ public class ItemPenitence extends ItemSwordBase {
     public ItemPenitence(String name, ToolMaterial material) {
         super(name, material);
         CommonFunctions.addToEventBus(this);
-        this.setMaxDamage(Integer.MAX_VALUE); // 设置最大耐久为一个非常大的数值
+        this.setMaxDamage(-1); // 设置最大耐久为一个非常大的数值
     }
 
     @SubscribeEvent

@@ -17,6 +17,7 @@ public class ModItems {
 	//Basic
 	//public static final Item PAPER_BLOOD = new ItemBase("paper_blood");
 	public static final Item LC_COGITO = new ItemBase("lc_item_cogito").setCreativeTab(ModCreativeTab.LC_ITEM);
+	public static final Item LC_PEBOX = new ItemBase("lc_item_pebox").setCreativeTab(ModCreativeTab.LC_ITEM);
 	public static final Item LC_EGO_PENITENCE = new ItemPenitence("lc_item_penitence", Item.ToolMaterial.DIAMOND).setCreativeTab(ModCreativeTab.LC_EGO_WEAPON);
 	public static final Item LC_EGO_WINGBEAT = new ItemWingbeat("lc_item_wingbeat", Item.ToolMaterial.DIAMOND).setCreativeTab(ModCreativeTab.LC_EGO_WEAPON);
 	public static final Item LC_EGO_SOMEWHERESPEAR = new ItemWingbeat("lc_item_somewherespear", Item.ToolMaterial.DIAMOND).setCreativeTab(ModCreativeTab.LC_EGO_WEAPON);
