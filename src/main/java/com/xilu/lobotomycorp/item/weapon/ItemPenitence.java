@@ -1,5 +1,6 @@
 package com.xilu.lobotomycorp.item.weapon;
 
+import com.xilu.lobotomycorp.LobotomyCorp;
 import com.xilu.lobotomycorp.handler.CapabilityHandler;
 import com.xilu.lobotomycorp.interfaces.IMentality;
 import com.xilu.lobotomycorp.item.ItemSwordBase;
@@ -33,10 +34,13 @@ public class ItemPenitence extends ItemSwordBase {
                     mentality.setMentalityValue(mentality.getMentalityValue() + 2 >= 20 ? 20 : mentality.getMentalityValue() + 2);
                 }
 
-                if (hurter instanceof EntityPlayer) {
+                try {
                     event.setCanceled(true);
                     IMentality mentality = hurter.getCapability(CapabilityHandler.capMentality, null);
                     mentality.setMentalityValue(event.getAmount() * 1.5f);
+                } catch (Exception ex) {
+                    LobotomyCorp.Log(ex.getMessage());
+                    return;
                 }
             }
         }
