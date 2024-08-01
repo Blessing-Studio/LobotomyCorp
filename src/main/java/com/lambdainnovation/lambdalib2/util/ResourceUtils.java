@@ -21,8 +21,7 @@ public class ResourceUtils {
     }
 
     private static String resToPath(ResourceLocation res) {
-        String domain = res.getNamespace(), path = res.getPath();
+        String domain = res.getResourceDomain(), path = res.getResourcePath();
         return "/assets/" + domain + "/" + path;
     }
-
 }

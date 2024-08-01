@@ -74,7 +74,7 @@ public class DrawTexture extends Component {
                 GL11.glTranslated(0, 0, zLevel);
             }
 
-            if(texture != null && !texture.getPath().equals("<null>")) {
+            if(texture != null && !texture.getResourcePath().equals("<null>")) {
                 HudUtils.loadTexture(texture);
                 if (doesUseUV) {
                     HudUtils.rect(0, 0, u, v, w.transform.width, w.transform.height, texWidth, texHeight);
