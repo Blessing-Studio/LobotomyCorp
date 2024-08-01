@@ -1,1 +1,39 @@
-{"parent": "item/handheld","textures": {"layer0":"lobotomycorp:items/weapon/lc_item_cherryblossom"}}
+{
+	"credit": "Made with Blockbench",
+	"parent": "item/generated",
+	"textures": {
+		"layer0":"lobotomycorp:items/weapon/lc_item_cherryblossom"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [-75, -90, 45],
+			"translation": [0.5, -2.25, 1],
+			"scale": [1.25, 1.25, 1.25]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [-75, 90, -46],
+			"translation": [0.5, -2.25, 1],
+			"scale": [1.25, 1.25, 1.26]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, -86, 60],
+			"translation": [1.5, -0.75, 1.25]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, -86, -45],
+			"translation": [0.5, -0.75, 1.25]
+		},
+		"ground": {
+			"rotation": [0, 0, 45]
+		},
+		"gui": {
+			"translation": [-4.5, -4.75, 0],
+			"scale": [1.5, 1.5, 1]
+		},
+		"fixed": {
+			"rotation": [0, 0, 45],
+			"translation": [0, -5, 0],
+			"scale": [1.5, 1.5, 1]
+		}
+	}
+}

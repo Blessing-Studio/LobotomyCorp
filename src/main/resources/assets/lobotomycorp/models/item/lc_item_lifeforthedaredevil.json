@@ -1,1 +1,40 @@
-{"parent": "item/handheld","textures": {"layer0":"lobotomycorp:items/weapon/lc_item_lifeforthedaredevil"}}
+{
+	"credit": "Made with Blockbench",
+	"parent": "item/generated",
+	"textures": {
+		"layer0":"lobotomycorp:items/weapon/lc_item_lifeforthedaredevil"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [-45, -90, 0],
+			"translation": [0, 9, 1.75],
+			"scale": [1.25, 1.25, 0.35]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [-45, 90, 0],
+			"translation": [0, 9, 1.75],
+			"scale": [1.25, 1.25, 0.35]
+		},
+		"firstperson_righthand": {
+			"rotation": [-75, -90, 0],
+			"translation": [3, 3.75, -2.25],
+			"scale": [1, 1, 0.35]
+		},
+		"firstperson_lefthand": {
+			"rotation": [-75, 90, 0],
+			"translation": [3, 3.75, -2.25],
+			"scale": [1, 1, 0.35]
+		},
+		"ground": {
+			"rotation": [0, 0, 90],
+			"scale": [1, 1, 0.35]
+		},
+		"gui": {
+			"rotation": [0, 180, 90]
+		},
+		"fixed": {
+			"rotation": [0, 0, 90],
+			"scale": [1.5, 1.49, 0.35]
+		}
+	}
+}

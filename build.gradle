@@ -27,11 +27,10 @@ boolean useMirror = use_mirror_url == "true"
 if (useMirror) apply from: "mirror.gradle"
 apply plugin: "net.minecraftforge.gradle.forge"
 apply from: "runmanager.gradle"
-//Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
+apply plugin: "scala"
 
-version = "0.0.3"
-
-group = "com.ideallandframework.modid" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+version = "0.0.4"
+group = "com.blessingstudio.lobotomycorp" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "lobotomycorp"
 
 sourceCompatibility = targetCompatibility = "1.8" // Need this here so eclipse task generates correctly.
@@ -54,12 +53,9 @@ minecraft {
 
 repositories {
 
-mavenCentral()
 }
 
 dependencies {
-    implementation 'com.bestvike:linq:5.0.0'
-
     // you may put jars on which you depend on in ./libs
     // or you may define them like so..
     //compile "some.group:artifact:version:classifier"

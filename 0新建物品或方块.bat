@@ -1,2 +1,0 @@
-lua GenBlockJson.lua
-pause

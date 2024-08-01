@@ -1,1 +1,30 @@
-{"parent": "item/handheld","textures": {"layer0":"lobotomycorp:items/weapon/lc_item_penitence"}}
+{
+	"credit": "Made with Blockbench",
+	"parent": "item/generated",
+	"textures": {
+		"layer0":"lobotomycorp:items/weapon/lc_item_penitence"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [0, 90, 45],
+			"translation": [0, 5.5, 1.5],
+			"scale": [1.25, 1.25, 1.25]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [0, 90, -47],
+			"translation": [0, 5.5, 1.5],
+			"scale": [1.25, 1.25, 1.25]
+		},
+		"firstperson_righthand": {
+			"rotation": [0, 85, 45],
+			"translation": [1, 3.25, 0.75]
+		},
+		"firstperson_lefthand": {
+			"rotation": [0, -85, -45],
+			"translation": [1, 3.25, 0.75]
+		},
+		"fixed": {
+			"scale": [1.25, 1.25, 1.25]
+		}
+	}
+}

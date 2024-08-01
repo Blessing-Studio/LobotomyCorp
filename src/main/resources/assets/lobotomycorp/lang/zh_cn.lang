@@ -1,30 +1,17 @@
-# PARSE_ESCAPES
+#PARSE_ESCAPES
 itemGroup.lc_ego_weapon_Tab=脑叶公司 E.G.O 武器
-itemGroup.lc_item_Tab=脑叶公司 物品
-
-generator.TYPE_ONE=Type One;
-generator.TYPE_TWO=Type Two;
-
-# config
-configgui.idealland.category.Menu0.GeneralConf=综合选项
-idealland.conf.general.welcome=欢迎词
-
-# Enchantments
-enchantment.lobotomycorp.physical_damage=物理伤害
-enchantment.lobotomycorp.mental_damage=精神伤害
-enchantment.lobotomycorp.erosion_damage=侵蚀伤害
-enchantment.lobotomycorp.spirit_damage=灵魂伤害
-
-item.lc_item_cogito.name=Cogito 药剂
-item.lc_item_pebox.name=PE-BOX
 
 # E.G.O 武器
 item.lc_item_penitence.name=忏悔
-item.lc_item_wingbeat.name=翅振
 item.lc_item_somewherespear.name=彼方的裂片
 item.lc_item_cherryblossom.name=落樱
 item.lc_item_regret.name=悔恨
 item.lc_item_lifeforthedaredevil.name=决死之心
+item.lc_item_christmas.name=悲惨圣诞
+item.lc_item_redeyes.name=赤瞳
+item.lc_item_horn.name=犄角
+item.lc_item_wingbeat.name=翅振
+item.lc_item_logging.name=伐木者
 
 # E.G.O 武器描述
 item.lc_item_penitence.desc=§2§lZAYIN\n§r§7唯有理解才能获取知识\n这把武器虽不像其它装备那般强大，但它能为持有者提供心灵上的慰藉\n每次攻击都有百分之五的概率恢复2点精神值
@@ -33,56 +20,3 @@ item.lc_item_somewherespear.desc=§3§lTETH\n§r§7必要想着去理解它，�
 item.lc_item_cherryblossom.desc=§3§lTETH\n§r§7花瓣散落开来，在空中飘过，如同展开的粉扇。\n映照出的余辉，令人眷恋着花落前的景色。
 item.lc_item_regret.desc=§3§lTETH\n§r§7对一个连葬礼都没有的人而言，唯有深深的悔恨才是最后的悼唁。
 item.lc_item_lifeforthedaredevil.desc=§3§lTETH\n§r§7这是一把古老的武士刀。\n如果这把刀落在了懦夫手里，它便一点威力也没有。
-
-
-# Potions
-idealland.potion.deadly=致死
-idealland.potion.zen_heart=功德无量
-
-
-entity.moroon_tainter.name=摩隆 拓荒者
-
-tile.idealland_light_basic.name=理境灯
-
-tile.test.name=理境测试块
-
-idealland.food.shared.xp_desc=含有经验: %d
-# Items
-idealland.gua_enhance_no_free.desc=可用铁砧镶嵌卦象
-idealland.gua_enhance_free.desc=徒手卦象镶嵌槽: %d
-
-# Items
-idealland.gua_enhance_total.desc=卦象强化: %d
-idealland.shared.press_shift=长按SHIFT查看详情
-
-fading.duration.desc=%d 秒后消失。
-
-item.debug_test.name=调试物品
-item.debug_test.desc=  在主手时减少受到的伤害 %d ;\n  造成 %d 电击伤害;\n  付与虚弱 Lv.%d (%d s);\n  击退 Lv.%d;\n  付与自身击退抗性 Lv.%d (%d s);\n  付与 %d 火焰伤害并点燃目标(%d s);\n  治疗双方 %d 点生命.
-
-item.xie_geta.name=谢公屐
-item.xie_geta.desc.0=上山模式，赋予%s级跳跃提升\n 右键地面切换模式
-item.xie_geta.desc.1=平地模式，赋予%s级速度\n 右键地面切换模式
-item.xie_geta.desc.2=下山模式，赋予I级缓慢并减少受到的摔落伤害 %s 点。\n 右键地面切换模式
-
-item.p2w_goblet.name=销金杯[装填模式]
-item.p2w_goblet.desc=氪金让你变强，强到骨子里。（塞金子升级，塞八卦、镐、食物可以改变模式）
-item.p2w_goblet.contain.desc=融解 %d 金
-item.p2w_goblet.player.desc=黄金之力：等级%d （%d/%d 金）
-
-idealland.skill.shared.cool_down_desc=冷却: %.1f秒
-idealland.skill.shared.power_desc=伤害: %.1f
-idealland.skill.shared.range_desc=半径: %.1f 格
-idealland.skill.shared.duration_desc=持续: %.1f秒
-idealland.skill.shared.error_desc=误差: +-%d
-idealland.skill.shared.level_desc=等级: %d/%d
-idealland.skill.shared.name_format=%s
-idealland.skill.shared.name_format_with_lv=%s (%s级) %s
-idealland.skill.shared.lv_max=[满]
-
-idealland.gua_enhance_list.desc=地%s 雷%s 水%s 山%s \n 泽%s 火%s 风%s 天%s
-idealland.gua_not_applicable.desc=-
-
-idealland.kill_count.desc=杀敌数: %d
-
-idealland.skill.msg.cool_down=冷却中
