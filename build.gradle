@@ -27,7 +27,6 @@ boolean useMirror = use_mirror_url == "true"
 if (useMirror) apply from: "mirror.gradle"
 apply plugin: "net.minecraftforge.gradle.forge"
 apply from: "runmanager.gradle"
-apply plugin: "scala"
 
 version = "0.0.4"
 group = "com.blessingstudio.lobotomycorp" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
