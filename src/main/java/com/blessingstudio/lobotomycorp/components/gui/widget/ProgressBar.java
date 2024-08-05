@@ -3,7 +3,6 @@ package com.blessingstudio.lobotomycorp.components.gui.widget;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScaledResolution;
-import com.lambdainnovation.lambdalib2.cgui.CGui;
 import org.lwjgl.opengl.GL11;
 
 public class ProgressBar extends Gui {

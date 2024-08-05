@@ -17,7 +17,7 @@ public class TestBar {
     public static void onRender(RenderGameOverlayEvent.Post event) {
         if (event.getType() == RenderGameOverlayEvent.ElementType.HEALTH) {
             if (Minecraft.getMinecraft().playerController.gameIsSurvivalOrAdventure()) {
-                _progressBar.render();
+//                _progressBar.render();
             }
         }
     }

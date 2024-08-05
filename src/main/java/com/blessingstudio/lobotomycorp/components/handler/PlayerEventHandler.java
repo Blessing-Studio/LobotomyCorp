@@ -3,6 +3,7 @@ package com.blessingstudio.lobotomycorp.components.handler;
 import com.blessingstudio.lobotomycorp.LobotomyCorp;
 import com.blessingstudio.lobotomycorp.classes.interfaces.IMentality;
 import com.blessingstudio.lobotomycorp.components.capability.MentalityCapability;
+import com.blessingstudio.lobotomycorp.service.SoundService;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTBase;

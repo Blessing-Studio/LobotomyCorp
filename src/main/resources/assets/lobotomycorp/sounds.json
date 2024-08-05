@@ -1,7 +1,6 @@
 {
-  "entity.killed":{
-    "category":"entity",
-    "subtitle" :"entity.killed",
-    "sounds":[{ "name": "lobotomycorp:kill", "stream":true }]
-  }
+  "entity.killed": {"category": "master", "sounds": [{"name": "lobotomycorp:entity/killed", "stream": false}]},
+  "alarm.one_level": {"category": "master", "sounds": [{"name": "lobotomycorp:alarm/one_level", "stream": true}]},
+  "alarm.second_level": {"category": "master", "sounds": [{"name": "lobotomycorp:alarm/second_level", "stream": true}]},
+  "alarm.three_level": {"category": "master", "sounds": [{"name": "lobotomycorp:alarm/three_level", "stream": true}]}
 }
