@@ -82,7 +82,6 @@ for (clazz in classToInit) {
 }
 
 replaceString "https://launchermeta.mojang.com/mc/game/version_manifest.json", redirectUrl("https://${mirror_assets_url}/mc/game/version_manifest.json")
-replaceString "http://resources.download.minecraft.net/", "https://download.mcbbs.net/assets/" // use MCBBS mirror due to there"s no way to hook http 302 response when downloading assets
 replaceString "https://libraries.minecraft.net/", "https://${mirror_maven_url}"
 replaceString "https://maven.minecraftforge.net", "https://${mirror_maven_url}"
 replaceString "https://maven.minecraftforge.net/de/oceanlabs/mcp/versions.json", redirectUrl("https://${mirror_maven_url}/de/oceanlabs/mcp/versions.json")

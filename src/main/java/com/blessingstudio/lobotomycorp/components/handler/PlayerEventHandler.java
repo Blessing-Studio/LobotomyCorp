@@ -3,7 +3,7 @@ package com.blessingstudio.lobotomycorp.components.handler;
 import com.blessingstudio.lobotomycorp.LobotomyCorp;
 import com.blessingstudio.lobotomycorp.classes.interfaces.IMentality;
 import com.blessingstudio.lobotomycorp.components.capability.MentalityCapability;
-import com.blessingstudio.lobotomycorp.service.SoundService;
+import com.blessingstudio.lobotomycorp.components.gui.widget.ProgressBar;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.nbt.NBTBase;
@@ -47,7 +47,6 @@ public class PlayerEventHandler {
     @SubscribeEvent
     public static void onPlayerLoggedIn(PlayerLoggedInEvent event) {
         event.player.sendMessage(new TextComponentString("感谢主管游玩 脑叶公司 " + VERSION + " 此版本为早期开发版，不代表最终质量！"));
-
         if (event.player.hasCapability(CapabilityHandler.mentalityCapability, null)) {
             IMentality mentality = event.player.getCapability(CapabilityHandler.mentalityCapability, null);
             LobotomyCorp.Log(""+mentality.getMentalityValue());

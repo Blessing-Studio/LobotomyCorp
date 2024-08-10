@@ -1,9 +1,13 @@
 package com.blessingstudio.lobotomycorp.components.gui.widget;
 
+import com.blessingstudio.lobotomycorp.util.render.RenderUtil;
 import net.minecraft.client.gui.Gui;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.ScaledResolution;
+import net.minecraft.client.renderer.entity.Render;
 import org.lwjgl.opengl.GL11;
+
+import java.awt.*;
 
 public class ProgressBar extends Gui {
     private static int _color;
@@ -62,9 +66,8 @@ public class ProgressBar extends Gui {
         int x = 10;
         int y = (int)(scaledResolution.getScaledHeight() - _height - 10);
 
-
-        drawRect(x, y, (int)(x + _width), (int)(y + _height), 0xFF000000);
-        drawGradientRect(x, y, (int)(x + _width), (int)(y + _height), 0xFFFFFFFF, 0x00FFFFFF);
-        drawRect(x, y, x + (int) (_progress / _maxProgress * _width), (int) (y + _height), 0xFFFF0000);
+        RenderUtil.drawRoundedRect(x, y+(int)_height-3, (int)(x + _width) / 6, (int)(y + _height), 2,new Color(0,0,0, 136).getRGB());
+//        drawGradientRect(x, y, (int)(x + _width), (int)(y + _height), 0xFFFFFFFF, 0x00FFFFFF);
+        RenderUtil.drawRoundedRect(x, y+(int)_height-3, x + (int) (_progress / _maxProgress * _width), (int) (y + _height), 2,0xFFFF0000);
     }
 }

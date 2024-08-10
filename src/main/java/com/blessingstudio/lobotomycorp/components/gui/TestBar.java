@@ -9,6 +9,7 @@ import net.minecraftforge.event.entity.living.LivingAttackEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.eventhandler.SubscribeEvent;
 
+
 @Mod.EventBusSubscriber
 public class TestBar {
     private static ProgressBar _progressBar = new ProgressBar(20, 0x00FFFFFF);
@@ -17,9 +18,17 @@ public class TestBar {
     public static void onRender(RenderGameOverlayEvent.Post event) {
         if (event.getType() == RenderGameOverlayEvent.ElementType.HEALTH) {
             if (Minecraft.getMinecraft().playerController.gameIsSurvivalOrAdventure()) {
-//                _progressBar.render();
+                _progressBar.render();
             }
         }
+    }
+
+    @SubscribeEvent
+    public static void onHUDRender(RenderGameOverlayEvent event){
+        if (event.getType() != RenderGameOverlayEvent.ElementType.ALL) {
+            return;
+        }
+        _progressBar.render();
     }
 
     @SubscribeEvent
